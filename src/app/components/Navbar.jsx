@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -10,15 +12,15 @@ const Navbar = ({ isBorder }) => {
     <nav
       className={
         isBorder
-          ? "fixed flex justify-center md:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md"
+          ? "fixed flex justify-center md:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
           : "fixed justify-center flex md:justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
       }
     >
       <div className="flex gap-8  text-[#F2F2F2] font-extralight">
-        <Link data-aos="fade-down" data-aos-duration="300" href={"#about"}>
+        <a href="#about" data-aos="fade-down" data-aos-duration="300">
           <p className="opacity-80 hover:opacity-100">About</p>
-        </Link>
-        <Link
+        </a>
+        <a
           data-aos="fade-down"
           data-aos-duration="300"
           data-aos-delay="200"
@@ -26,8 +28,8 @@ const Navbar = ({ isBorder }) => {
           href={"#portfolio"}
         >
           <p className="opacity-80 hover:opacity-100">Portfolio</p>
-        </Link>
-        <Link
+        </a>
+        <a
           data-aos="fade-down"
           data-aos-duration="300"
           data-aos-delay="400"
@@ -36,11 +38,12 @@ const Navbar = ({ isBorder }) => {
         >
           {" "}
           <p className="opacity-80 hover:opacity-100">Contact</p>
-        </Link>
+        </a>
       </div>
       <div className="hidden gap-10 md:flex">
-        <Link
-          href={"#about"}
+        <a
+          href="https://www.linkedin.com/in/adamhonvedo/"
+          target="_blank"
           data-aos="fade-down"
           data-aos-duration="300"
           data-aos-delay="400"
@@ -50,9 +53,10 @@ const Navbar = ({ isBorder }) => {
             src={inkedin}
             alt="linkedin"
           />
-        </Link>
-        <Link
-          href={"#portfolio"}
+        </a>
+        <a
+          href="https://github.com/Homvi"
+          target="_blank"
           data-aos="fade-down"
           data-aos-duration="300"
           data-aos-delay="200"
@@ -62,7 +66,7 @@ const Navbar = ({ isBorder }) => {
             src={github}
             alt="linkedin"
           />
-        </Link>
+        </a>
         <a
           data-aos="fade-down"
           data-aos-duration="300"
