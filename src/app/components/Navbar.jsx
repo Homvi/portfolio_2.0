@@ -11,11 +11,11 @@ const Navbar = ({ isBorder }) => {
     <nav
       className={
         isBorder
-          ? "fixed flex justify-center xl:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
-          : "fixed justify-center flex xl:justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
+          ? "fixed flex justify-center xl:justify-between w-full py-3 px-8 font-nunitoXLight  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
+          : "fixed justify-center flex xl:justify-between w-full py-3 px-8 font-nunitoXLight  backdrop-blur-md  text-md"
       }
     >
-      <div className="flex gap-8  text-[#F2F2F2] font-extralight">
+      <div className="flex gap-8 items-center text-[#F2F2F2] font-extralight">
         <a href="#about" data-aos="fade-down" data-aos-duration="300">
           <p className="opacity-80 hover:opacity-100">About</p>
         </a>

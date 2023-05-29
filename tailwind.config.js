@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: "Nunito",
+        nunitoBold: "Nunito-Bold",
+        nunitoRegular: "Nunito-regular",
+        nunitoLight: "Nunito-light",
+        nunitoXLight: "Nunito-X-light",
       },
       boxShadow: {
         custom: "0px 0px 10px 0px #27465a52",

@@ -4,8 +4,20 @@
 
 @layer base {
     @font-face {
-        font-family: "Nunito";
+        font-family: "Nunito-Bold";
+        src: url("/fonts/nunito/Bold.ttf");
+    }
+    @font-face {
+        font-family: "Nunito-X-light";
         src: url("/fonts/nunito/Nunito-ExtraLight.ttf");
+    }
+    @font-face {
+        font-family: "Nunito-light";
+        src: url("/fonts/nunito/Nunito-Light.ttf");
+    }
+    @font-face {
+        font-family: "Nunito-regular";
+        src: url("/fonts/nunito/Nunito-Regular.ttf");
     }
 }
 
