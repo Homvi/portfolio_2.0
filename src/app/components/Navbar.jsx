@@ -15,25 +15,48 @@ const Navbar = ({ isBorder }) => {
       }
     >
       <div className="flex gap-8  text-[#F2F2F2] font-extralight">
-        <Link className="opacity-80 hover:opacity-100" href={"#about"}>
-          About
+        <Link data-aos="fade-down" data-aos-duration="300" href={"#about"}>
+          <p className="opacity-80 hover:opacity-100">About</p>
         </Link>
-        <Link className=" opacity-80 hover:opacity-100" href={"#portfolio"}>
-          Portfolio
+        <Link
+          data-aos="fade-down"
+          data-aos-duration="300"
+          data-aos-delay="200"
+          className=" opacity-80 hover:opacity-100"
+          href={"#portfolio"}
+        >
+          <p className="opacity-80 hover:opacity-100">Portfolio</p>
         </Link>
-        <Link className="opacity-80 hover:opacity-100" href={"#contact"}>
-          Contact
+        <Link
+          data-aos="fade-down"
+          data-aos-duration="300"
+          data-aos-delay="400"
+          className="opacity-80 hover:opacity-100"
+          href={"#contact"}
+        >
+          {" "}
+          <p className="opacity-80 hover:opacity-100">Contact</p>
         </Link>
       </div>
       <div className="hidden gap-10 md:flex">
-        <Link href={"#about"}>
+        <Link
+          href={"#about"}
+          data-aos="fade-down"
+          data-aos-duration="300"
+          data-aos-delay="400"
+        >
           <Image
             className="opacity-60 hover:opacity-100"
             src={inkedin}
             alt="linkedin"
           />
         </Link>
-        <Link href={"#portfolio"}>
+        <Link
+          href={"#portfolio"}
+          data-aos="fade-down"
+          data-aos-duration="300"
+          data-aos-delay="200"
+        >
           <Image
             className="opacity-80 hover:opacity-100"
             src={github}
@@ -41,6 +64,8 @@ const Navbar = ({ isBorder }) => {
           />
         </Link>
         <a
+          data-aos="fade-down"
+          data-aos-duration="300"
           href="/assets/CV/HonvedoAdam_Frontend_CV.pdf"
           download="Adam_Honvedo_CV_Frontend"
         >

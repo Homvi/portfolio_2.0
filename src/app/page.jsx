@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 export default function Home() {
   let name = "ADAM HONVEDO";
   let title = "frontend developer";
   const arrayOfLettersOfName = name.split("");
   const arrayOfLettersOfTitle = title.split("");
-
   const [isBorderOnNav, setIsBorderOnNav] = useState(false);
 
   useEffect(() => {
@@ -17,6 +20,14 @@ export default function Home() {
       } else {
         setIsBorderOnNav(false);
       }
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
     });
   }, []);
 
@@ -49,7 +60,7 @@ export default function Home() {
         </div>
       </section>
       {/* intro section */}
-      
+
     </>
   );
 }
