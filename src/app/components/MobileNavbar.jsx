@@ -13,13 +13,15 @@ const MobileNavbar = () => {
             className="opacity-60 hover:opacity-100"
             src={inkedin}
             alt="linkedin"
+            height={30}
           />
         </a>
         <a href="https://github.com/Homvi" target="_blank">
           <Image
             className="opacity-80 hover:opacity-100"
             src={github}
-            alt="linkedin"
+            alt="github"
+            height={30}
           />
         </a>
         <a
@@ -29,7 +31,8 @@ const MobileNavbar = () => {
           <Image
             className="opacity-95 hover:opacity-100"
             src={CVLogo}
-            alt="linkedin"
+            alt="CV"
+            height={30}
           />
         </a>
       </div>
