@@ -11,7 +11,7 @@ const MobileNavbar = () => {
         <a href="https://www.linkedin.com/in/adamhonvedo/" target="_blank">
           <Image
             priority
-            className="opacity-80 h-[30px] w-auto"
+            className="opacity-80 h-[30px] w-auto fill-white"
             src={inkedin}
             alt="linkedin"
             height={30}
