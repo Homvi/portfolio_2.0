@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+    background-color: #071927;
     scroll-behavior: smooth;
     background: rgb(7, 25, 39);
     background: -moz-linear-gradient(158deg, rgba(7, 25, 39, 1) 0%, rgba(24, 24, 24, 1) 100%);

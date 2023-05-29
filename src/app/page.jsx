@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MobileNavbar from "./components/MobileNavbar";
+import Head from "next/head";
 
 export default function Home() {
   let name = "ADAM HONVEDO";
@@ -33,6 +34,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta name="theme-color" content="#071927" />
+        <meta name="author" content="Adakin" />
+      </Head>
       <Navbar isBorder={isBorderOnNav} />
       <MobileNavbar />
       {/* landing section */}
