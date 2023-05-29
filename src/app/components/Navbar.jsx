@@ -1,13 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import inkedin from "../../assets/linkedin.svg";
-import github from "../../assets/github.svg";
-import CVLogo from "../../assets/CVLogo.svg";
+import inkedin from "../assets/linkedin.svg";
+import github from "../assets/github.svg";
+import CVLogo from "../assets/CVLogo.svg";
 
-const Navbar = () => {
+const Navbar = ({ isBorder }) => {
   return (
-    <nav className="fixed flex justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a91] text-md">
+    <nav
+      className={
+        isBorder
+          ? "fixed flex justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md"
+          : "fixed flex justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
+      }
+    >
       <div className="flex gap-8  text-[#F2F2F2] font-extralight">
         <Link className="opacity-80 hover:opacity-100" href={"#about"}>
           About
@@ -34,13 +40,16 @@ const Navbar = () => {
             alt="linkedin"
           />
         </Link>
-        <Link href={"#contact"}>
+        <a
+          href="/assets/CV/HonvedoAdam_Frontend_CV.pdf"
+          download="Adam_Honvedo_CV_Frontend"
+        >
           <Image
             className="opacity-95 hover:opacity-100"
             src={CVLogo}
             alt="linkedin"
           />
-        </Link>
+        </a>
       </div>
     </nav>
   );

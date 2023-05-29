@@ -1,11 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
 export default function Home() {
   let name = "ADAM HONVEDO";
   let title = "frontend developer";
   const arrayOfLettersOfName = name.split("");
   const arrayOfLettersOfTitle = title.split("");
 
+  const [isBorderOnNav, setIsBorderOnNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (event) => {
+      if (window.pageYOffset) {
+        setIsBorderOnNav(true);
+      } else {
+        setIsBorderOnNav(false);
+      }
+    });
+  }, []);
+
   return (
     <>
+      <Navbar isBorder={isBorderOnNav} />
+      {/* landing section */}
       <section className="min-h-screen bg-gradient-to-br font-extralight from-[#071927]  to-[#181818] flex flex-col justify-center items-center">
         <div className="text-9xl  w-full flex justify-around  text-[#27465A]  mb-16 ">
           {arrayOfLettersOfName.map((letter, id) => {
@@ -30,6 +48,8 @@ export default function Home() {
           })}
         </div>
       </section>
+      {/* intro section */}
+      
     </>
   );
 }
