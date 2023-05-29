@@ -48,6 +48,7 @@ const Navbar = ({ isBorder }) => {
           data-aos-delay="400"
         >
           <Image
+            priority
             className="opacity-60 hover:opacity-100"
             src={inkedin}
             alt="linkedin"
@@ -61,6 +62,7 @@ const Navbar = ({ isBorder }) => {
           data-aos-delay="200"
         >
           <Image
+            priority
             className="opacity-80 hover:opacity-100"
             src={github}
             alt="linkedin"
@@ -73,6 +75,7 @@ const Navbar = ({ isBorder }) => {
           download="Adam_Honvedo_CV_Frontend"
         >
           <Image
+            priority
             className="opacity-95 hover:opacity-100"
             src={CVLogo}
             alt="linkedin"

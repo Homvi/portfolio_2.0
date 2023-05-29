@@ -10,16 +10,20 @@ const MobileNavbar = () => {
       <div className="flex justify-around w-full ">
         <a href="https://www.linkedin.com/in/adamhonvedo/" target="_blank">
           <Image
-            className="opacity-60 hover:opacity-100 h-[30px] w-[30px]"
+            priority
+            className="opacity-80 h-[30px] w-auto"
             src={inkedin}
             alt="linkedin"
+            height={30}
           />
         </a>
         <a href="https://github.com/Homvi" target="_blank">
           <Image
-            className="opacity-80 hover:opacity-100 h-[30px]"
+            priority
+            className="opacity-100  h-[30px]"
             src={github}
             alt="github"
+            height={30}
           />
         </a>
         <a
@@ -27,9 +31,11 @@ const MobileNavbar = () => {
           download="Adam_Honvedo_CV_Frontend"
         >
           <Image
-            className="opacity-95 hover:opacity-100 h-[30px]"
+            priority
+            className="opacity-80 h-[30px]"
             src={CVLogo}
             alt="CV"
+            height={30}
           />
         </a>
       </div>
