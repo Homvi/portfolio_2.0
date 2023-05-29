@@ -49,9 +49,10 @@ const Navbar = ({ isBorder }) => {
         >
           <Image
             priority
-            className="opacity-60 hover:opacity-100"
+            className="opacity-60 hover:opacity-100 h-[30px] w-auto"
             src={inkedin}
             alt="linkedin"
+            width={30}
           />
         </a>
         <a
