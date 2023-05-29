@@ -10,8 +10,8 @@ const Navbar = ({ isBorder }) => {
     <nav
       className={
         isBorder
-          ? "fixed flex justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md"
-          : "fixed flex justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
+          ? "fixed flex justify-center md:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md"
+          : "fixed justify-center flex md:justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
       }
     >
       <div className="flex gap-8  text-[#F2F2F2] font-extralight">
@@ -25,7 +25,7 @@ const Navbar = ({ isBorder }) => {
           Contact
         </Link>
       </div>
-      <div className="flex gap-10">
+      <div className="hidden gap-10 md:flex">
         <Link href={"#about"}>
           <Image
             className="opacity-60 hover:opacity-100"
