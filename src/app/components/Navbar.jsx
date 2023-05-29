@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import inkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
@@ -12,8 +11,8 @@ const Navbar = ({ isBorder }) => {
     <nav
       className={
         isBorder
-          ? "fixed flex justify-center md:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
-          : "fixed justify-center flex md:justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
+          ? "fixed flex justify-center xl:justify-between w-full py-3 px-8  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
+          : "fixed justify-center flex xl:justify-between w-full py-3 px-8   backdrop-blur-md  text-md"
       }
     >
       <div className="flex gap-8  text-[#F2F2F2] font-extralight">
@@ -24,7 +23,7 @@ const Navbar = ({ isBorder }) => {
           data-aos="fade-down"
           data-aos-duration="300"
           data-aos-delay="200"
-          className=" opacity-80 hover:opacity-100"
+          className="opacity-80 hover:opacity-100"
           href={"#portfolio"}
         >
           <p className="opacity-80 hover:opacity-100">Portfolio</p>
@@ -40,7 +39,7 @@ const Navbar = ({ isBorder }) => {
           <p className="opacity-80 hover:opacity-100">Contact</p>
         </a>
       </div>
-      <div className="hidden gap-10 md:flex">
+      <div className="hidden gap-10 xl:flex">
         <a
           href="https://www.linkedin.com/in/adamhonvedo/"
           target="_blank"
