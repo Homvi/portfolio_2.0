@@ -87,7 +87,7 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-duration="300"
             data-aos-delay="400"
-            className="py-10"
+            className="py-5 md:py-10"
           >
             Frontend development isn&apos;t just my profession — it&apos;s my
             playground. <br /> I thrive in turning creative concepts into live,
@@ -97,7 +97,7 @@ export default function Home() {
             Ready to rock the digital world with my code?
           </p>
         </div>
-        <div className="absolute bottom-0 right-0 w-[300px] sm:w-[600px]">
+        <div className="absolute bottom-0 right-0 w-[300px] sm:w-[210px] md:w-[400px]  xl:w-[600px]">
           <Image height={1524} width={1524} src={profile} alt="adam" />
         </div>
       </section>
