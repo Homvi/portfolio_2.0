@@ -97,7 +97,7 @@ export default function Home() {
             Ready to rock the digital world with my code?
           </p>
         </div>
-        <div className="absolute bottom-0 right-0 w-[300px] sm:w-[500px]">
+        <div className="absolute bottom-0 right-0 w-[300px] sm:w-[600px]">
           <Image height={1524} width={1524} src={profile} alt="adam" />
         </div>
       </section>
