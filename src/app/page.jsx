@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import MobileNavbar from "./components/MobileNavbar";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
+/* import profile from "./assets/profile.png"; */
 
 export default function Home() {
   let name = "ADAM HONVEDO";
@@ -38,6 +40,7 @@ export default function Home() {
       <Head>
         <meta name="theme-color" content="#071927" />
         <meta name="author" content="Adakin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navbar isBorder={isBorderOnNav} />
       <MobileNavbar />
@@ -70,17 +73,19 @@ export default function Home() {
       </section>
       <section
         id="about"
-        className="min-h-screen bg-gradient-to-br font-extralight from-[#071927]  to-[#181818] flex flex-col justify-center items-center"
+        className="relative font-nunitoRegular text-[#F2F2F2] flex flex-col md:justify-center h-screen p-5 md:p-10 "
       >
-        <div className="mlgd:text-9xl  w-full flex justify-around  text-[#27465A]  mb-16 ">
-          {arrayOfLettersOfName.map((letter, id) => {
-            return <span key={id}>{letter}</span>;
-          })}
+        <div className="md:w-[60%] text-md min-h-[60%] flex flex-col items-start justify-center sm:text-lg">
+          <h3 className="text-xl sm:text-2xl">Hi, I&apos;m Adam!</h3>
+          <p className="py-10">
+            Frontend development isn&apos;t just my profession — it&apos;s my
+            playground. <br /> I thrive in turning creative concepts into live,
+            user-friendly applications.
+          </p>
+          <p>Ready to rock the digital world with my code?</p>
         </div>
-        <div className="  xl:text-5xl text-[#515151] w-[70%] md:[50%] flex justify-around">
-          {arrayOfLettersOfTitle.map((letter, id) => {
-            return <span key={id}>{letter}</span>;
-          })}
+        <div className="absolute bottom-0 right-0 w-[300px] sm:w-[500px]">
+          <Image height={1524} width={1524} src="/img/profile.png" alt="adam" />
         </div>
       </section>
       {/* intro section */}
