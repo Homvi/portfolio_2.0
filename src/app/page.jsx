@@ -8,7 +8,7 @@ import MobileNavbar from "./components/MobileNavbar";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-/* import profile from "./assets/profile.png"; */
+import profile from "./assets/img/profile.png";
 
 export default function Home() {
   let name = "ADAM HONVEDO";
@@ -40,7 +40,6 @@ export default function Home() {
       <Head>
         <meta name="theme-color" content="#071927" />
         <meta name="author" content="Adakin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navbar isBorder={isBorderOnNav} />
       <MobileNavbar />
@@ -73,7 +72,7 @@ export default function Home() {
       </section>
       <section
         id="about"
-        className="relative z-10 font-nunitoRegular text-[#F2F2F2] flex flex-col md:justify-center h-screen p-5 md:p-10 "
+        className="relative z-10 text-[#F2F2F2] flex flex-col md:justify-center h-screen p-5 md:p-10 "
       >
         <div className="md:w-[60%] text-md min-h-[60%] flex flex-col items-start justify-center sm:text-lg">
           <h3 className="text-xl sm:text-2xl">Hi, I&apos;m Adam!</h3>
@@ -85,7 +84,7 @@ export default function Home() {
           <p>Ready to rock the digital world with my code?</p>
         </div>
         <div className="absolute bottom-0 right-0 w-[300px] sm:w-[500px]">
-          <Image height={1524} width={1524} src="/img/profile.png" alt="adam" />
+          <Image height={1524} width={1524} src={profile} alt="adam" />
         </div>
       </section>
       {/* intro section */}
