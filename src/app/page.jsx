@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MobileNavbar from "./components/MobileNavbar";
+import { motion } from "framer-motion";
 import Head from "next/head";
 
 export default function Home() {
@@ -42,16 +43,30 @@ export default function Home() {
       <MobileNavbar />
       {/* landing section */}
       <section className="min-h-screen bg-gradient-to-br font-nunitoXLight from-[#071927]  to-[#181818] flex flex-col justify-center items-center">
-        <div className="text-4xl xl:text-6xl w-[95%]  flex justify-around  text-[#27465A] mb-5 md:mb-16 ">
-          {arrayOfLettersOfName.map((letter, id) => {
-            return <span key={id}>{letter}</span>;
-          })}
-        </div>
-        <div className="w-[70%] text-2xl  xl:text-4xl text-[#515151] md:w-[50%] flex justify-around">
-          {arrayOfLettersOfTitle.map((letter, id) => {
-            return <span key={id}>{letter}</span>;
-          })}
-        </div>
+        <motion.div
+          className="flex justify-center w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <div className="text-3xl md:text-5xl xl:text-6xl w-[95%]  flex justify-around  text-[#27465A] mb-5 md:mb-16 ">
+            {arrayOfLettersOfName.map((letter, id) => {
+              return <span key={id}>{letter}</span>;
+            })}
+          </div>
+        </motion.div>
+        <motion.div
+          className="flex justify-center w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3, delay: 2 }}
+        >
+          <div className="w-[70%] text-xl md:text-3xl xl:text-4xl text-[#515151] md:w-[50%] flex justify-around">
+            {arrayOfLettersOfTitle.map((letter, id) => {
+              return <span key={id}>{letter}</span>;
+            })}
+          </div>
+        </motion.div>
       </section>
       <section
         id="about"
