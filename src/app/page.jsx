@@ -73,7 +73,7 @@ export default function Home() {
       </section>
       <section
         id="about"
-        className="relative font-nunitoRegular text-[#F2F2F2] flex flex-col md:justify-center h-screen p-5 md:p-10 "
+        className="relative z-10 font-nunitoRegular text-[#F2F2F2] flex flex-col md:justify-center h-screen p-5 md:p-10 "
       >
         <div className="md:w-[60%] text-md min-h-[60%] flex flex-col items-start justify-center sm:text-lg">
           <h3 className="text-xl sm:text-2xl">Hi, I&apos;m Adam!</h3>

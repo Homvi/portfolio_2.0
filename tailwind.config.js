@@ -14,7 +14,7 @@ module.exports = {
         nunitoXLight: "Nunito-X-light",
       },
       boxShadow: {
-        custom: "0px 0px 10px 0px #27465a52",
+        custom: "0px 0px 10px 0px #ffffff22",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

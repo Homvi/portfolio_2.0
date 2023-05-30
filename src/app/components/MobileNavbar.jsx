@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const MobileNavbar = () => {
   return (
-    <nav className="fixed bottom-0 xl:hidden flex justify-center  w-full py-2 px-8  border-t-[1px] backdrop-blur-md border-[#27465a52]">
+    <nav className="fixed z-20 bottom-0 xl:hidden flex justify-center  w-full py-2 px-8  border-t-[1px] backdrop-blur-md border-[#ffffff22]">
       <div className="flex justify-around w-full ">
         <a href="https://www.linkedin.com/in/adamhonvedo/" target="_blank">
           <Image

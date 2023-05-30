@@ -11,8 +11,8 @@ const Navbar = ({ isBorder }) => {
     <nav
       className={
         isBorder
-          ? "fixed flex justify-center xl:justify-between w-full py-3 px-8 font-nunitoXLight  border-b-[1px] backdrop-blur-md border-[#27465a52] text-md shadow-custom"
-          : "fixed justify-center flex xl:justify-between w-full py-3 px-8 font-nunitoXLight  backdrop-blur-md  text-md"
+          ? "fixed flex z-20 justify-center xl:justify-between w-full py-3 px-8 font-nunitoXLight  border-b-[1px] backdrop-blur-md border-[#ffffff12] text-md shadow-custom"
+          : "fixed z-20 justify-center flex xl:justify-between w-full py-3 px-8 font-nunitoXLight  backdrop-blur-md  text-md"
       }
     >
       <div className="flex gap-8 items-center text-[#F2F2F2] font-extralight">
