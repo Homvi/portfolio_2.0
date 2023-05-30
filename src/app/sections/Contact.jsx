@@ -1,12 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import profile from "../assets/img/profile.png";
 import check from "../assets/check-no-circle.svg";
 
 const Contact = () => {
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+
+  useEffect(() => {
+    setIsCheckboxChecked(false);
+  }, []);
 
   return (
     <section
@@ -19,17 +23,19 @@ const Contact = () => {
       <form action="/" method="post" className="w-full md:w-[40%] my-10">
         <div className="flex flex-col mb-5">
           <label htmlFor="name">Name</label>
-          <input
+            <input
             type="text"
             id="name"
+            name="name"
             className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
           />
         </div>
         <div className="flex flex-col mb-5">
           <label htmlFor="email">Email</label>
-          <input
+            <input
             type="text"
             id="email"
+            name="email"
             className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
           />
         </div>
@@ -38,8 +44,9 @@ const Contact = () => {
           <textarea
             type="text"
             id="message"
-            rows="8"
-            className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
+            name="message"
+            rows="4"
+            className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2"
           />
         </div>
       </form>
