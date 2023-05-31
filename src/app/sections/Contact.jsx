@@ -1,9 +1,5 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import profile from "../assets/img/profile.png";
-import check from "../assets/check-no-circle.svg";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -21,9 +17,7 @@ const validationSchema = Yup.object().shape({
     .required("You must accept the terms and conditions"),
 });
 
-
 const Contact = () => {
-
   return (
     <section
       id="contact"
@@ -35,7 +29,6 @@ const Contact = () => {
       <Formik
         initialValues={{ name: "", email: "", message: "", privacy: false }}
         validationSchema={validationSchema}
-      
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -56,7 +49,7 @@ const Contact = () => {
               <ErrorMessage
                 name="name"
                 component="div"
-                className="text-red-500"
+                className="text-red-500 text-sm"
               />
             </div>
             <div className="flex flex-col mb-5">
@@ -70,7 +63,7 @@ const Contact = () => {
               <ErrorMessage
                 name="email"
                 component="div"
-                className="text-red-500"
+                className="text-red-500  text-sm"
               />
             </div>
             <div className="flex flex-col mb-5">
@@ -86,7 +79,7 @@ const Contact = () => {
               <ErrorMessage
                 name="message"
                 component="div"
-                className="text-red-500"
+                className="text-red-500  text-sm"
               />
             </div>
 
@@ -105,7 +98,7 @@ const Contact = () => {
               <ErrorMessage
                 name="privacy"
                 component="div"
-                className="text-red-500"
+                className="text-red-500 text-sm"
               />
             </div>
             <button type="submit" disabled={isSubmitting}>
