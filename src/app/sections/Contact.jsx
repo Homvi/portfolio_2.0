@@ -16,14 +16,13 @@ const validationSchema = Yup.object().shape({
   message: Yup.string()
     .min(10, "Message should be at least 10 characters long")
     .required("Required"),
+  privacy: Yup.boolean()
+    .oneOf([true], "You must accept the terms and conditions")
+    .required("You must accept the terms and conditions"),
 });
 
-const Contact = () => {
-  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
-  useEffect(() => {
-    setIsCheckboxChecked(false);
-  }, []);
+const Contact = () => {
 
   return (
     <section
@@ -34,8 +33,9 @@ const Contact = () => {
         Contact
       </h2>
       <Formik
-        initialValues={{ name: "", email: "", message: "" }}
+        initialValues={{ name: "", email: "", message: "", privacy: false }}
         validationSchema={validationSchema}
+      
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -43,8 +43,8 @@ const Contact = () => {
           }, 400);
         }}
       >
-        {({ isSubmitting }) => (
-          <form action="/" method="post" className="w-full md:w-[40%] my-10">
+        {({ isSubmitting, handleChange }) => (
+          <Form action="/" method="post" className="w-full md:w-[40%] my-10">
             <div className="flex flex-col mb-5">
               <label htmlFor="name">Name</label>
               <Field
@@ -89,38 +89,31 @@ const Contact = () => {
                 className="text-red-500"
               />
             </div>
-          </form>
+
+            <div className="flex flex-col">
+              <div className="flex">
+                <Field type="checkbox" name="privacy" className="mr-2" />
+                <p>Privacy policy</p>
+              </div>
+              <p className="text-sm font-nunitoXLight">
+                I have read and agree to the
+                <a href="#privacy" className="font-nunitoBold">
+                  {" "}
+                  Privacy Policy.
+                </a>
+              </p>
+              <ErrorMessage
+                name="privacy"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </Form>
         )}
       </Formik>
-      <div className="flex flex-col">
-        <div className="flex">
-          <div
-            className="relative flex justify-center items-center"
-            onClick={(e) => setIsCheckboxChecked(!isCheckboxChecked)}
-          >
-            <div className="">
-              <div className="h-4 w-4 border-[1px] rounded-sm cursor-pointer mr-2 border-[#f2f2f2b6]"></div>
-            </div>
-            <Image
-              src={check}
-              alt="check"
-              className={
-                isCheckboxChecked
-                  ? "mr-1 h-[6px] left-[3px] cursor-pointer absolute select-none"
-                  : "hidden"
-              }
-            />
-          </div>
-          <p>Privacy policy</p>
-        </div>
-        <p className="text-sm font-nunitoXLight">
-          I have read and agree to the
-          <a href="#privacy" className="font-nunitoBold">
-            {" "}
-            Privacy Policy.
-          </a>
-        </p>
-      </div>
 
       <div className="hidden md:block absolute bottom-0 right-0 w-[300px] sm:w-[210px] md:w-[400px]  xl:w-[600px]">
         <Image height={1524} width={1524} src={profile} alt="adam" />
