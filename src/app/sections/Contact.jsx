@@ -5,16 +5,16 @@ import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
+    .min(2, "The name must be minimum 2 characters!")
+    .max(50, "The name must be maximum 50 characters!")
     .required("Required"),
   email: Yup.string().email("Invalid email address").required("Required"),
   message: Yup.string()
     .min(10, "Message should be at least 10 characters long")
     .required("Required"),
   privacy: Yup.boolean()
-    .oneOf([true], "You must accept the terms and conditions")
-    .required("You must accept the terms and conditions"),
+    .oneOf([true], "You must agree the privacy policy")
+    .required("You must agree the privacy policy"),
 });
 
 const Contact = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
       id="contact"
       className="relative z-10 text-[#F2F2F2] flex flex-col h-screen p-5 md:p-10 "
     >
-      <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight">
+      <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center sm:text-left">
         Contact
       </h2>
       <Formik
@@ -36,7 +36,7 @@ const Contact = () => {
           }, 400);
         }}
       >
-        {({ isSubmitting, handleChange }) => (
+        {({ isSubmitting }) => (
           <Form action="/" method="post" className="w-full md:w-[40%] my-10">
             <div className="flex flex-col mb-5">
               <label htmlFor="name">Name</label>
@@ -101,9 +101,15 @@ const Contact = () => {
                 className="text-red-500 text-sm"
               />
             </div>
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
+            <div className="flex justify-center mt-4 mb-5">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-[#f2f2f21a] px-[20px] py-[2px] rounded-full text-sm border-[1px] border-[#f2f2f238] hover:bg-[#f2f2f241]"
+              >
+                Send message
+              </button>
+            </div>
           </Form>
         )}
       </Formik>
