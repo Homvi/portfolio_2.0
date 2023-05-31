@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative z-10 text-[#F2F2F2] flex flex-col h-screen p-5 md:p-10 "
+      className="relative z-10 text-[#F2F2F2] flex flex-col min-h-screen p-5 md:p-10 "
     >
       <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center sm:text-left">
         Contact
