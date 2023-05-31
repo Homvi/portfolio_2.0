@@ -2,6 +2,7 @@ import Image from "next/image";
 import profile from "../assets/img/profile.png";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -17,6 +18,22 @@ const validationSchema = Yup.object().shape({
     .required("You must agree the privacy policy"),
 });
 
+const handleSubmit = async (values, { setSubmitting }) => {
+  try {
+    const response = await axios.post("https://stormy-badlands-81408.herokuapp.com/submit-form", values);
+
+    console.log(response.data);
+
+    // Clear form fields and stop submitting
+    setSubmitting(false);
+  } catch (error) {
+    console.error(error);
+
+    // If there is an error, stop submitting
+    setSubmitting(false);
+  }
+};
+
 const Contact = () => {
   return (
     <section
@@ -29,12 +46,7 @@ const Contact = () => {
       <Formik
         initialValues={{ name: "", email: "", message: "", privacy: false }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+        onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
           <Form action="/" method="post" className="w-full md:w-[40%] my-10">
