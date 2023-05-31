@@ -4,6 +4,19 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import profile from "../assets/img/profile.png";
 import check from "../assets/check-no-circle.svg";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  message: Yup.string()
+    .min(10, "Message should be at least 10 characters long")
+    .required("Required"),
+});
 
 const Contact = () => {
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
@@ -20,36 +33,65 @@ const Contact = () => {
       <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight">
         Contact
       </h2>
-      <form action="/" method="post" className="w-full md:w-[40%] my-10">
-        <div className="flex flex-col mb-5">
-          <label htmlFor="name">Name</label>
-            <input
-            type="text"
-            id="name"
-            name="name"
-            className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
-          />
-        </div>
-        <div className="flex flex-col mb-5">
-          <label htmlFor="email">Email</label>
-            <input
-            type="text"
-            id="email"
-            name="email"
-            className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
-          />
-        </div>
-        <div className="flex flex-col mb-5">
-          <label htmlFor="message">Message</label>
-          <textarea
-            type="text"
-            id="message"
-            name="message"
-            rows="4"
-            className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2"
-          />
-        </div>
-      </form>
+      <Formik
+        initialValues={{ name: "", email: "", message: "" }}
+        validationSchema={validationSchema}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <form action="/" method="post" className="w-full md:w-[40%] my-10">
+            <div className="flex flex-col mb-5">
+              <label htmlFor="name">Name</label>
+              <Field
+                type="text"
+                id="name"
+                name="name"
+                className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <div className="flex flex-col mb-5">
+              <label htmlFor="email">Email</label>
+              <Field
+                type="text"
+                id="email"
+                name="email"
+                className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2 "
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+            <div className="flex flex-col mb-5">
+              <label htmlFor="message">Message</label>
+              <Field
+                as="textarea"
+                type="text"
+                id="message"
+                name="message"
+                rows="4"
+                className="p-1 text-[#f2f2f2] bg-[#696969] rounded-sm mt-2"
+              />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className="text-red-500"
+              />
+            </div>
+          </form>
+        )}
+      </Formik>
       <div className="flex flex-col">
         <div className="flex">
           <div
