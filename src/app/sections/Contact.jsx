@@ -3,6 +3,7 @@ import profile from "../assets/img/profile.png";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useState } from "react";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -18,27 +19,32 @@ const validationSchema = Yup.object().shape({
     .required("You must agree the privacy policy"),
 });
 
-const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-  try {
-    const response = await axios.post(
-      "https://stormy-badlands-81408.herokuapp.com/submit-form",
-      values
-    );
-
-    console.log(response.data);
-
-    // Clear form fields and stop submitting
-    resetForm();
-    setSubmitting(false);
-  } catch (error) {
-    console.error(error);
-
-    // If there is an error, stop submitting
-    setSubmitting(false);
-  }
-};
-
 const Contact = () => {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    setStatus("Pending");
+    try {
+      const response = await axios.post(
+        "https://stormy-badlands-81408.herokuapp.com/submit-form",
+        values
+      );
+
+      console.log(response.data);
+
+      // Clear form fields and stop submitting
+      resetForm();
+      setSubmitting(false);
+      setStatus("Success");
+    } catch (error) {
+      console.error(error);
+
+      // If there is an error, stop submitting
+      setSubmitting(false);
+      setStatus("Error");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -125,6 +131,21 @@ const Contact = () => {
               >
                 Send message
               </button>
+            </div>
+            <div className="flex w-full justify-center text-sm">
+              {status === "Error" && (
+                <div className="text-red-500 text-center">
+                  Upps! Something went wrong!
+                </div>
+              )}
+              {status === "Success" && (
+                <div className="text-green-400 text-center">
+                  Success! Your message has been sent!
+                </div>
+              )}
+              {status === "Pending" && (
+                <div className="text-center">Sending...</div>
+              )}
             </div>
           </Form>
         )}
