@@ -18,13 +18,17 @@ const validationSchema = Yup.object().shape({
     .required("You must agree the privacy policy"),
 });
 
-const handleSubmit = async (values, { setSubmitting }) => {
+const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   try {
-    const response = await axios.post("https://stormy-badlands-81408.herokuapp.com/submit-form", values);
+    const response = await axios.post(
+      "https://stormy-badlands-81408.herokuapp.com/submit-form",
+      values
+    );
 
     console.log(response.data);
 
     // Clear form fields and stop submitting
+    resetForm();
     setSubmitting(false);
   } catch (error) {
     console.error(error);
