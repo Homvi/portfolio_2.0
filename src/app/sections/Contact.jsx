@@ -154,6 +154,22 @@ const Contact = () => {
       <div className="hidden md:block absolute bottom-0 right-0 w-[300px] sm:w-[210px] md:w-[400px]  xl:w-[600px]">
         <Image height={1524} width={1524} src={profile} alt="adam" />
       </div>
+      <footer className=" md:absolute bottom-0 w-full md:w-fit text-center md:text-left mt-14 mb-14 xl:my-5  font-extralight">
+        <div className="text-[12px]">
+          <div className="opacity-40">&copy; adakin 2023</div>
+          <div className="opacity-100">
+            {" "}
+            👋🤖<span className="opacity-30">
+              This website made with React
+            </span>{" "}
+            ⚛️<span className="opacity-30">, Next.js</span> ⏭️,{" "}
+            <a href="https://www.svgbackgrounds.com/" target="_blank">
+              SVGBackgrounds.com
+            </a>{" "}
+            <span className="opacity-30">and more...</span> 🚀
+          </div>
+        </div>
+      </footer>
     </section>
   );
 };
