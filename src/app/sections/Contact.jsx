@@ -112,7 +112,7 @@ const Contact = () => {
               </div>
               <p className="text-sm font-nunitoXLight">
                 I have read and agree to the
-                <a href="#privacy" className="font-nunitoBold">
+                <a href="/privacy" target="_blank" className="font-nunitoBold">
                   {" "}
                   Privacy Policy.
                 </a>
