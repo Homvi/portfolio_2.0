@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br  from-[#071927]  to-[#181818] flex flex-col text-white py-5">
-      <div className="container mx-auto">
+      <div className="p-3 md:px-10">
         <h1 className="text-3xl font-bold my-3">Privacy Policy</h1>
         <p className="font-light my-3 max-w-xl">
           This Privacy Policy describes how we collect, use, and handle your
