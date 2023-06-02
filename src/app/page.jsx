@@ -9,6 +9,7 @@ import Head from "next/head";
 import Landing from "./sections/Landing";
 import Intro from "./sections/Intro";
 import Contact from "./sections/Contact";
+import Portfolio from "./sections/Portfolio";
 
 export default function Home() {
   const [isBorderOnNav, setIsBorderOnNav] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
       </Head>
       <Navbar isBorder={isBorderOnNav} />
       <MobileNavbar />
+      <Portfolio />
       <Landing />
       <Intro />
       <Contact />
