@@ -9,18 +9,69 @@ const Portfolio = () => {
       title: "Goldkert transfer",
       description:
         "HTML5UP based website. Made for the Goldkertbau Kft. The site shares and gathers information.",
-      technologies: ["Javascript", "Htlm", "Css", "Jsx", "Scss"],
+      technologies: [
+        {
+          name: "Javascript",
+          src: "",
+        },
+        {
+          name: "Htlm",
+          src: "",
+        },
+        {
+          name: "Css",
+          src: "",
+        },
+        {
+          name: "React",
+          src: "",
+        },
+      ],
     },
     {
       title: "Wedding site",
       description:
         "Custom website made for share information about the wedding of the client.",
-      technologies: ["Javascript", "Htlm", "Css", "Next.js"],
+      technologies: [
+        {
+          name: "Javascript",
+          src: "",
+        },
+        {
+          name: "Htlm",
+          src: "",
+        },
+        {
+          name: "Css",
+          src: "",
+        },
+        {
+          name: "React",
+          src: "",
+        },
+      ],
     },
     {
       title: "Luxcode",
       description: "Hobby project made for my future business.",
-      technologies: ["Javascript", "Htlm", "Css", "React"],
+      technologies: [
+        {
+          name: "Javascript",
+          src: "",
+        },
+        {
+          name: "Htlm",
+          src: "",
+        },
+        {
+          name: "Css",
+          src: "",
+        },
+        {
+          name: "React",
+          src: "",
+        },
+      ],
     },
   ];
 

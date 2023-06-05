@@ -17,12 +17,15 @@ const Card = ({ id, description, title, technologies }) => {
             <p className="font-nunitoLight">{description}</p>
           </div>
           <div className="mt-5">
-            <p className="font-nunitoBold">Technologies</p>
-            <div className="flex  flex-wrap gap-2">
+            <p className="font-nunitoBold mb-1">Technologies</p>
+            <div className="flex  flex-wrap gap-1">
               {technologies.map((tech, id) => (
-                <span key={`title_${id}`} className="font-nunitoLight">
-                  {tech}
-                </span>
+                <div
+                  key={`title_${id}`}
+                  className="font-nunitoRegular bg-[#213340] py-1 px-3 rounded-full border-[1px] border-[#384854]"
+                >
+                  <span>{tech.name}</span>
+                </div>
               ))}
             </div>
           </div>
