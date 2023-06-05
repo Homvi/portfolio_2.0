@@ -2,6 +2,15 @@
 import React from "react";
 import { useEffect } from "react";
 import Card from "../components/Card";
+import figma from "../assets/tech-logo/figma.png";
+import react from "../assets/tech-logo/react.svg";
+import git from "../assets/tech-logo/git.png";
+import node from "../assets/tech-logo/node.svg";
+import tailwind from "../assets/tech-logo/tailwind.png";
+import javascript from "../assets/tech-logo/javascript.svg";
+import css from "../assets/tech-logo/css.svg";
+import html from "../assets/tech-logo/html.svg";
+import next from "../assets/tech-logo/next.svg";
 
 const Portfolio = () => {
   const projects = [
@@ -11,20 +20,16 @@ const Portfolio = () => {
         "HTML5UP based website. Made for the Goldkertbau Kft. The site shares and gathers information.",
       technologies: [
         {
-          name: "Javascript",
-          src: "",
-        },
-        {
-          name: "Htlm",
-          src: "",
+          name: "Html",
+          src: html,
         },
         {
           name: "Css",
-          src: "",
+          src: css,
         },
         {
-          name: "React",
-          src: "",
+          name: "Javascript",
+          src: javascript,
         },
       ],
     },
@@ -35,19 +40,27 @@ const Portfolio = () => {
       technologies: [
         {
           name: "Javascript",
-          src: "",
+          src: javascript,
         },
         {
-          name: "Htlm",
-          src: "",
-        },
-        {
-          name: "Css",
-          src: "",
+          name: "Git",
+          src: git,
         },
         {
           name: "React",
-          src: "",
+          src: react,
+        },
+        {
+          name: "Next.js",
+          src: next,
+        },
+        {
+          name: "Tailwind.css",
+          src: tailwind,
+        },
+        {
+          name: "Figma",
+          src: figma,
         },
       ],
     },
@@ -57,19 +70,23 @@ const Portfolio = () => {
       technologies: [
         {
           name: "Javascript",
-          src: "",
+          src: javascript,
         },
         {
-          name: "Htlm",
-          src: "",
+          name: "Figma",
+          src: figma,
         },
         {
-          name: "Css",
-          src: "",
+          name: "Git",
+          src: git,
         },
         {
           name: "React",
-          src: "",
+          src: react,
+        },
+        {
+          name: "Tailwind.css",
+          src: tailwind,
         },
       ],
     },

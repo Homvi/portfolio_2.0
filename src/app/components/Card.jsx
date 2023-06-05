@@ -1,10 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 const Card = ({ id, description, title, technologies }) => {
-  console.log(technologies);
+  //add aos appearing
   return (
+    <>
     <div
-      className="card bg-white/5 rounded-lg cursor-pointer flex h-96 flex-col relative w-60 "
+      className="card bg-white/5 rounded-lg cursor-pointer flex h-96 flex-col relative w-64"
       id={id}
     >
       <div className="bg-[#162937] flex flex-col rounded-md  inset-[2px]  absolute z-[2] ">
@@ -12,7 +14,7 @@ const Card = ({ id, description, title, technologies }) => {
           {title}
         </h3>
         <div className="p-3 flex flex-col h-full justify-start">
-          <div className="h-[60%]">
+          <div className="h-[40%]">
             <p className="font-nunitoBold">Description</p>
             <p className="font-nunitoLight">{description}</p>
           </div>
@@ -22,9 +24,12 @@ const Card = ({ id, description, title, technologies }) => {
               {technologies.map((tech, id) => (
                 <div
                   key={`title_${id}`}
-                  className="font-nunitoRegular bg-[#213340] py-1 px-3 rounded-full border-[1px] border-[#384854]"
+                  className="font-nunitoRegular flex items-center bg-[#213340] py-[1px] px-3 rounded-full border-[1px] border-[#384854]"
                 >
-                  <span>{tech.name}</span>
+                  <span className="mr-2">{tech.name}</span>
+                  <div className="">
+                    <Image className="w-auto h-4" src={tech.src} alt="figma" />
+                  </div>
                 </div>
               ))}
             </div>
@@ -32,6 +37,7 @@ const Card = ({ id, description, title, technologies }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
