@@ -4,35 +4,23 @@ import { useEffect } from "react";
 import Card from "../components/Card";
 
 const Portfolio = () => {
-  const cards = [
-    "First",
-    "Second",
-    "Third",
-    "First",
-    "Second",
-    "Third",
-    "First",
-    "Second",
-    "Third",
-    "First",
-    "Second",
-    "Third",
-  ];
-
   const projects = [
     {
       title: "Goldkert transfer",
       description:
         "HTML5UP based website. Made for the Goldkertbau Kft. The site shares and gathers information.",
+      technologies: ["Javascript", "Htlm", "Css", "Jsx", "Scss"],
     },
     {
       title: "Wedding site",
       description:
         "Custom website made for share information about the wedding of the client.",
+      technologies: ["Javascript", "Htlm", "Css", "Next.js"],
     },
     {
       title: "Luxcode",
       description: "Hobby project made for my future business.",
+      technologies: ["Javascript", "Htlm", "Css", "React"],
     },
   ];
 
@@ -65,6 +53,7 @@ const Portfolio = () => {
               id={`card_${id}`}
               description={project.description}
               title={project.title}
+              technologies={project.technologies}
             />
           ))}
         </div>

@@ -4,9 +4,9 @@
 
 :root {
     --bg-color: rgb(20, 20, 20);
-    --card-color: #071927;
+    --card-color: #162937;
 }
-
+    
 @layer base {
     @font-face {
         font-family: "Nunito-Bold";

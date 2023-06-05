@@ -1,22 +1,30 @@
 import React from "react";
 
-const Card = ({ id, description, title }) => {
+const Card = ({ id, description, title, technologies }) => {
+  console.log(technologies);
   return (
     <div
-      className="card bg-white/5 rounded-lg cursor-pointer flex h-64 flex-col relative w-72"
+      className="card bg-white/5 rounded-lg cursor-pointer flex h-96 flex-col relative w-60 "
       id={id}
     >
-      <div className="card-content">
-        <div className="card-image">
-          <i className="fa-duotone fa-apartment"></i>
-        </div>
-        <div className="card-info-wrapper h-full">
-          <div className="card-info p-3 flex flex-col gap-1 h-full">
-            <div className="card-info-title">
-              <h3 className="text-center mb-2">{title}</h3>
+      <div className="bg-[#162937] flex flex-col rounded-md  inset-[2px]  absolute z-[2] ">
+        <h3 className="text-center rounded-b-md mb-2 font-nunitoRegular bg-[#1F2E3B] px-4 py-1 w-fit mx-auto mt-0">
+          {title}
+        </h3>
+        <div className="p-3 flex flex-col h-full justify-start">
+          <div className="h-[60%]">
+            <p className="font-nunitoBold">Description</p>
+            <p className="font-nunitoLight">{description}</p>
+          </div>
+          <div className="mt-5">
+            <p className="font-nunitoBold">Technologies</p>
+            <div className="flex  flex-wrap gap-2">
+              {technologies.map((tech, id) => (
+                <span key={`title_${id}`} className="font-nunitoLight">
+                  {tech}
+                </span>
+              ))}
             </div>
-            <p className="font-bold" >Description</p>
-            <p className="">{description}</p>
           </div>
         </div>
       </div>
