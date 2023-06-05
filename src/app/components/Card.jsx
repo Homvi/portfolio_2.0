@@ -13,9 +13,13 @@ const Card = ({
   speed,
 }) => {
   //add aos appearing
+  let delay = id * 200;
   return (
     <>
       <div
+        data-aos="fade-down"
+        data-aos-duration="400"
+        data-aos-delay={delay}
         className="card bg-white/5 rounded-lg shadow-lg cursor-pointer mb-14 flex h-96 flex-col relative w-64"
         id={id}
       >
@@ -50,22 +54,22 @@ const Card = ({
             </div>
           </div>
         </div>
-      <div className="flex  justify-around absolute bottom-[-50px] z-[2] items-center w-64 h-9 shadow-lg mt-3 hover:bg-[#6e89a813] transition-all duration-75 border-[1px] border-white/20 cursor-default  bg-[#1629372d] rounded-lg">
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <Image className="w-auto h-6" src={githubLogo} alt="figma" />
-        </a>
-        <a
-          href={live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-nunitoRegular text-sm bg-[#213340] py-[1px] px-5 rounded-full border-[1px]  border-[#384854] "
-        >
-          Visit site
-        </a>
-        <a href={speed} target="_blank" rel="noopener noreferrer">
-          <Image className="w-7 h-auto" src={speedLogo} alt="figma" />
-        </a>
-      </div>
+        <div className="flex  justify-around absolute bottom-[-50px] z-[2] items-center w-64 h-9 shadow-lg mt-3 hover:bg-[#6e89a813] transition-all duration-75 border-[1px] border-white/20 cursor-default  bg-[#1629372d] rounded-lg">
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <Image className="w-auto h-6" src={githubLogo} alt="figma" />
+          </a>
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-nunitoRegular text-sm bg-[#213340] py-[1px] px-5 rounded-full border-[1px]  border-[#384854] "
+          >
+            Visit site
+          </a>
+          <a href={speed} target="_blank" rel="noopener noreferrer">
+            <Image className="w-7 h-auto" src={speedLogo} alt="figma" />
+          </a>
+        </div>
       </div>
     </>
   );

@@ -33,7 +33,7 @@ const Portfolio = () => {
           {projects.map((project, id) => (
             <Card
               key={id}
-              id={`card_${id}`}
+              id={id}
               description={project.description}
               title={project.title}
               technologies={project.technologies}
