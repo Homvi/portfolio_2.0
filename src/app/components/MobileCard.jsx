@@ -11,15 +11,15 @@ const MobileCard = ({
   speed,
 }) => {
   return (
-    <div className="w-full bg-[#ffffff0c] rounded-lg backdrop-blur-md">
+    <div  className="w-full bg-[#ffffff0c] rounded-lg backdrop-blur-md custom-white-border">
       <div className="bg-[#1F2E3B] w-fit px-3 py-[2px] text-sm font-nunitoLight rounded-tl-lg rounded-br-lg">{title}</div>
       <div className="content p-3">
-        <p className="my-1 font-nunitoXLight" >{description}</p>
+        <p className="mb-2 font-nunitoXLight" >{description}</p>
         <div className="flex flex-wrap gap-1">
           {technologies.map((tech, id) => (
             <div
               key={`title_${id}`}
-              className="font-nunitoRegular flex items-center bg-[#213340] py-[1px] px-3 rounded-full border-[1px] border-[#384854]"
+              className="font-nunitoRegular flex items-center bg-[#213340] text-sm py-[1px] px-[7px] rounded-full border-[1px] border-[#384854]"
             >
               <span className="mr-2">{tech.name}</span>
               <div className="">

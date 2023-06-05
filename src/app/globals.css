@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-    
+
 @layer base {
     @font-face {
         font-family: "Nunito-Bold";
@@ -82,4 +82,9 @@ body {
     z-index: 1;
 }
 
-
+.custom-white-border {
+    box-shadow: 
+    -1px -1px 1px 1px #ffffff1c, 
+    1px 1px 1px 0px #ffffff69, 
+    1px -1px 1px 0px #ffffff3f;
+}

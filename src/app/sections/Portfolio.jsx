@@ -119,7 +119,7 @@ const Portfolio = () => {
       id="portfolio"
       className="relative z-10 text-[#F2F2F2]  min-h-screen p-5 md:p-10 "
     >
-      <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center md:text-left">
+      <h2 className="mt-12 md:mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center md:text-left">
         Portfolio
       </h2>
 
