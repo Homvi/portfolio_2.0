@@ -15,7 +15,45 @@ import next from "../assets/tech-logo/next.svg";
 const Portfolio = () => {
   const projects = [
     {
+      title: "Luxcode",
+      github: "https://github.com/Homvi/luxcode",
+      live: "https://luxcode.dev/",
+      speed:
+        "https://pagespeed.web.dev/analysis/https-luxcode-dev/qkgacrtoyi?form_factor=desktop",
+      description: "Hobby project made for my future business.",
+      technologies: [
+        {
+          name: "React",
+          src: react,
+        },
+        {
+          name: "Next.js",
+          src: next,
+        },
+        {
+          name: "Javascript",
+          src: javascript,
+        },
+        {
+          name: "Figma",
+          src: figma,
+        },
+        {
+          name: "Git",
+          src: git,
+        },
+        {
+          name: "Tailwind.css",
+          src: tailwind,
+        },
+      ],
+    },
+    {
       title: "Goldkert transfer",
+      github: "https://github.com/Homvi/GoldkertTransfer",
+      live: "https://goldkerttransfer.com/",
+      speed:
+        "https://pagespeed.web.dev/analysis?url=https://goldkerttransfer.com/&form_factor=desktop",
       description:
         "HTML5UP based website. Made for the Goldkertbau Kft. The site shares and gathers information.",
       technologies: [
@@ -34,7 +72,11 @@ const Portfolio = () => {
       ],
     },
     {
-      title: "Wedding site",
+      title: "Akman Solutions",
+      github: "https://github.com/Homvi/akmanSolutions",
+      live: "https://akmansolutions.com/",
+      speed:
+        "https://pagespeed.web.dev/analysis?url=https://akmansolutions.com/&form_factor=desktop",
       description:
         "Custom website made for share information about the wedding of the client.",
       technologies: [
@@ -47,46 +89,12 @@ const Portfolio = () => {
           src: git,
         },
         {
-          name: "React",
-          src: react,
+          name: "Html",
+          src: html,
         },
         {
-          name: "Next.js",
-          src: next,
-        },
-        {
-          name: "Tailwind.css",
-          src: tailwind,
-        },
-        {
-          name: "Figma",
-          src: figma,
-        },
-      ],
-    },
-    {
-      title: "Luxcode",
-      description: "Hobby project made for my future business.",
-      technologies: [
-        {
-          name: "Javascript",
-          src: javascript,
-        },
-        {
-          name: "Figma",
-          src: figma,
-        },
-        {
-          name: "Git",
-          src: git,
-        },
-        {
-          name: "React",
-          src: react,
-        },
-        {
-          name: "Tailwind.css",
-          src: tailwind,
+          name: "Css",
+          src: css,
         },
       ],
     },
@@ -114,14 +122,18 @@ const Portfolio = () => {
         Portfolio
       </h2>
       <div className="cards-container flex min-h-screen  mt-5 p-0">
-        <div id="cards" className="flex flex-wrap gap-3 max-w-7xl ">
+        <div id="cards" className="flex flex-wrap gap-3">
           {projects.map((project, id) => (
+            
             <Card
               key={id}
               id={`card_${id}`}
               description={project.description}
               title={project.title}
               technologies={project.technologies}
+              github={project.github}
+              live={project.live}
+              speed={project.speed}
             />
           ))}
         </div>

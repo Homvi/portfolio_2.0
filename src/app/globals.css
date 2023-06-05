@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-    --bg-color: rgb(20, 20, 20);
-    --card-color: #162937;
-}
     
 @layer base {
     @font-face {
@@ -87,14 +82,4 @@ body {
     z-index: 1;
 }
 
-.card > .card-content {
-    background-color: var(--card-color);
-    border-radius: inherit;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    inset: 1px;
-    padding: 10px;
-    position: absolute;
-    z-index: 2;
-}
+

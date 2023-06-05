@@ -32,9 +32,9 @@ export default function Home() {
       </Head>
       <Navbar isBorder={isBorderOnNav} />
       <MobileNavbar />
+      <Portfolio />
       <Landing />
       <Intro />
-      <Portfolio />
       <Contact />
     </>
   );
