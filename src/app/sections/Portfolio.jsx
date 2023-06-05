@@ -11,6 +11,7 @@ import javascript from "../assets/tech-logo/javascript.svg";
 import css from "../assets/tech-logo/css.svg";
 import html from "../assets/tech-logo/html.svg";
 import next from "../assets/tech-logo/next.svg";
+import MobileCard from "../components/MobileCard";
 
 const Portfolio = () => {
   const projects = [
@@ -118,16 +119,32 @@ const Portfolio = () => {
       id="portfolio"
       className="relative z-10 text-[#F2F2F2]  min-h-screen p-5 md:p-10 "
     >
-      <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center sm:text-left">
+      <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center md:text-left">
         Portfolio
       </h2>
-      <div className="cards-container flex min-h-screen  mt-5 p-0">
+
+      <div className="cards-container hidden md:flex min-h-screen  mt-5 p-0">
         <div id="cards" className="flex flex-wrap gap-3">
           {projects.map((project, id) => (
-            
             <Card
               key={id}
               id={`card_${id}`}
+              description={project.description}
+              title={project.title}
+              technologies={project.technologies}
+              github={project.github}
+              live={project.live}
+              speed={project.speed}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="cards-container  md:hidden min-h-screen  mt-5 p-0">
+        <div id="cardsMobile" className="flex flex-col gap-3">
+          {projects.map((project, id) => (
+            <MobileCard
+              key={id}
+              id={`card_mobile_${id}`}
               description={project.description}
               title={project.title}
               technologies={project.technologies}
