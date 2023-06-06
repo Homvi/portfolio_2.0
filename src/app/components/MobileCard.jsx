@@ -12,6 +12,7 @@ const MobileCard = ({
   github,
   live,
   speed,
+  activeTechnologies,
 }) => {
   return (
     <div className="w-full bg-[#ffffff0c]  rounded-lg backdrop-blur-md custom-white-border">
@@ -25,7 +26,11 @@ const MobileCard = ({
             {technologies.map((tech, id) => (
               <div
                 key={`title_${id}`}
-                className="font-nunitoRegular flex items-center bg-[#213340] text-sm py-[1px] px-[7px] rounded-full border-[1px] border-[#384854]"
+                className={
+                  activeTechnologies.indexOf(tech.name) === -1
+                    ? "font-nunitoRegular flex items-center bg-[#213340] text-sm py-[1px] px-[7px] rounded-full border-[1px] border-[#384854]"
+                    : "font-nunitoRegular flex items-center bg-[#6b7881] text-sm py-[1px] px-[7px] rounded-full border-[1px] border-[#384854]"
+                }
               >
                 <span className="mr-2">{tech.name}</span>
                 <div className="">

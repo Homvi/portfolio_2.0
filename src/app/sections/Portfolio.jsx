@@ -26,7 +26,7 @@ const Portfolio = () => {
   }, []);
 
   useEffect(() => {
-    setActiveTechnologies(getActiveTechnologies(technologiesState))
+    setActiveTechnologies(getActiveTechnologies(technologiesState));
   }, [technologiesState]);
 
   const getTechnologiesWithStatus = (technologiesObject) => {
@@ -98,7 +98,7 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-{/* cards desktop */}
+      {/* cards desktop */}
       <div className="cards-container hidden md:flex min-h-screen  mt-5 p-0">
         <div id="cards" className="flex flex-wrap gap-3">
           {projects.map((project, id) => (
@@ -120,6 +120,7 @@ const Portfolio = () => {
         <div id="cardsMobile" className="flex flex-col gap-3">
           {projects.map((project, id) => (
             <MobileCard
+              activeTechnologies={activeTechnologies}
               key={id}
               id={`card_mobile_${id}`}
               description={project.description}
