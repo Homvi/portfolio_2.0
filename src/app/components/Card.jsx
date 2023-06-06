@@ -11,6 +11,7 @@ const Card = ({
   github,
   live,
   speed,
+  activeTechnologies,
 }) => {
   //add aos appearing
   let delay = id * 200;
@@ -38,7 +39,11 @@ const Card = ({
                 {technologies.map((tech, id) => (
                   <div
                     key={`title_${id}`}
-                    className="font-nunitoRegular flex items-center bg-[#213340] py-[1px] px-3 rounded-full border-[1px] border-[#384854]"
+                    className={
+                      activeTechnologies.indexOf(tech.name) === -1
+                        ? "font-nunitoRegular flex items-center bg-[#213340] py-[1px] px-3 rounded-full border-[1px] border-[#384854]"
+                        : "font-nunitoRegular flex items-center bg-[#6b7881] py-[1px] px-3 rounded-full border-[1px] border-[#384854]"
+                    }
                   >
                     <span className="mr-2">{tech.name}</span>
                     <div className="">
