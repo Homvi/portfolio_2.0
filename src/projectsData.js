@@ -42,9 +42,9 @@ export const projects = [
     description:
       "Custom website made for share information about the wedding of the client.",
     technologies: [
-      technologies.javascript,
       technologies.html,
       technologies.css,
+      technologies.javascript,
       technologies.git,
     ],
   },
