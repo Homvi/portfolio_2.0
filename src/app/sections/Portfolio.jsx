@@ -27,7 +27,6 @@ const Portfolio = () => {
       <h2 className="mt-12 md:mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center md:text-left">
         Portfolio
       </h2>
-
       <div className="cards-container hidden md:flex min-h-screen  mt-5 p-0">
         <div id="cards" className="flex flex-wrap gap-3">
           {projects.map((project, id) => (
