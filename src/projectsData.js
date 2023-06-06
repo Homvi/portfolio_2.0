@@ -7,7 +7,7 @@ export const projects = [
     live: "https://luxcode.dev/",
     speed:
       "https://pagespeed.web.dev/analysis/https-luxcode-dev/qkgacrtoyi?form_factor=desktop",
-    description: "Hobby project made for my future business.",
+    description: " A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
     technologies: [
       technologies.react,
       technologies.next,
@@ -25,7 +25,7 @@ export const projects = [
     speed:
       "https://pagespeed.web.dev/analysis?url=https://goldkerttransfer.com/&form_factor=desktop",
     description:
-      "HTML5UP based website. Made for the Goldkertbau Kft. The site shares and gathers information.",
+      "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
     technologies: [
       technologies.html,
       technologies.css,
@@ -40,7 +40,7 @@ export const projects = [
     speed:
       "https://pagespeed.web.dev/analysis?url=https://akmansolutions.com/&form_factor=desktop",
     description:
-      "Custom website made for share information about the wedding of the client.",
+      "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
     technologies: [
       technologies.html,
       technologies.css,

@@ -28,8 +28,8 @@ const Card = ({
           <h3 className="text-center rounded-b-md mb-2 font-nunitoXLight bg-[#1F2E3B] px-4 py-1 w-fit mx-auto mt-0">
             {title}
           </h3>
-          <div className="p-3 flex flex-col h-full justify-start">
-            <div className="h-[40%]">
+          <div className="p-3 flex flex-col h-full justify-between">
+            <div className="min-h-[40%]">
               <p className="font-nunitoRegular">Description</p>
               <p className="font-nunitoXLight">{description}</p>
             </div>
