@@ -1,3 +1,4 @@
+// Importing technology logos from the respective files
 import figma from "./app/assets/tech-logo/figma.png";
 import react from "./app/assets/tech-logo/react.svg";
 import git from "./app/assets/tech-logo/git.png";
@@ -8,6 +9,7 @@ import css from "./app/assets/tech-logo/css.svg";
 import html from "./app/assets/tech-logo/html.svg";
 import next from "./app/assets/tech-logo/next.svg";
 
+// Creating an object where each technology is associated with its name and the imported logo
 export const technologies = {
   figma: {
     name: "Figma",

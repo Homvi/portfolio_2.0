@@ -1,5 +1,7 @@
+// Importing the technologies object from the technologies.js file
 import { technologies } from "./technologies";
 
+// Exporting an array of project objects. Each object represents a project, with its respective information
 export const projects = [
   {
     title: "Luxcode",
