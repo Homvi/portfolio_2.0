@@ -5,6 +5,9 @@ import React from "react";
 import inkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import CVLogo from "../assets/CVLogo.svg";
+import languageLogoEn from "../assets/lang-logo/en.png";
+import languageLogoEs from "../assets/lang-logo/es.png";
+import languageLogoHu from "../assets/lang-logo/hu.png";
 
 const Navbar = ({ isBorder }) => {
   return (
@@ -66,7 +69,7 @@ const Navbar = ({ isBorder }) => {
             priority
             className="opacity-80 hover:opacity-100"
             src={github}
-            alt="linkedin"
+            alt="github"
           />
         </a>
         <a
@@ -79,9 +82,29 @@ const Navbar = ({ isBorder }) => {
             priority
             className="opacity-95 hover:opacity-100"
             src={CVLogo}
-            alt="linkedin"
+            alt="cv"
           />
         </a>
+        <div data-aos="fade-down" data-aos-duration="200" className=" flex">
+          <Image
+            priority
+            className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+            src={languageLogoEn}
+            alt="english"
+          />
+          <Image
+            priority
+            className="opacity-50 hidden hover:opacity-100 mx-3  w-7 h-7 cursor-pointer"
+            src={languageLogoEs}
+            alt="espanol"
+          />
+          <Image
+            priority
+            className="opacity-50 hidden hover:opacity-100  w-7 h-7 cursor-pointer"
+            src={languageLogoHu}
+            alt="magyar"
+          />
+        </div>
       </div>
     </nav>
   );
