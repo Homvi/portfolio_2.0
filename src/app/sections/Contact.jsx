@@ -21,7 +21,7 @@ const Contact = ({ languageData }) => {
       .email(alertContent.invalidMail)
       .required(alertContent.required),
     message: Yup.string()
-      .min(10, alertContent.reqshortMessageired)
+      .min(10, alertContent.shortMessage)
       .required(alertContent.required),
     privacy: Yup.boolean()
       .oneOf([true], alertContent.privacy)
