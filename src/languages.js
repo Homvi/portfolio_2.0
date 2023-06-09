@@ -24,6 +24,7 @@ export const data = {
         akman:
           "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
       },
+      description:"Description"
     },
     /* contact */
     constact: {
@@ -62,15 +63,22 @@ export const data = {
       contact: "Kapcsolat",
     },
     /* introduction */
-    heading: "",
-    description: "",
+     /* introduction */
+     intro: {
+      heading: "Ádám vagyok",
+      description:
+        "Frontend development isn't just my profession — it's my playground. I thrive in turning creative concepts into live, user-friendly applications.",
+      callToAction: "Ready to rock the digital world with my code?",
+    },
     portfolio: {
       heading: "Portfolio",
       projectDesc: {
-        luxcode: "",
-        goldkert: "",
-        akman: "",
+        luxcode: "Magyar leírás",
+        goldkert: "Magyar leírás",
+        akman: "Magyar leírás",
       },
+      description:"Részletek",
+      visit:"Visit site"
     },
   },
   ES: {
