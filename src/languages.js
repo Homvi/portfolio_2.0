@@ -68,9 +68,9 @@ export const data = {
     intro: {
       heading: "Szia, Ádám vagyok!",
       description:
-        "A frontend fejlesztés nem csupán a hivatásom — ez a játszóterem. Szeretek kreatív ötleteket felhasználóbarát alkalmazásokká alakítani.",
+        "A frontend fejlesztés nem csupán a hivatásom — ez a játszóterem.",
       callToAction:
-        "Készen állsz, hogy megrázzuk a digitális világot az én kódomban?",
+        "Dobjuk fel kicsit a webet! 😎",
     },
     /* portfolio */
     portfolio: {
@@ -85,7 +85,7 @@ export const data = {
       },
       description: "Leírás",
       technologies: "Technológiák",
-      visit: "Weboldal megtekintése",
+      visit: "Weboldal",
     },
     /* contact */
     contact: {

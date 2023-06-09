@@ -79,7 +79,7 @@ const Portfolio = ({ languageData }) => {
       className="relative z-10 text-[#F2F2F2]  min-h-screen p-5 md:p-10 "
     >
       <h2 className="mt-12 md:mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center md:text-left">
-        Portfolio
+        {languageData[language].portfolio.heading}
       </h2>
 
       <div className="flex  flex-wrap gap-1 my-5">
@@ -109,7 +109,9 @@ const Portfolio = ({ languageData }) => {
               key={id}
               id={id}
               description={
-                languageData[language].portfolio.projectDesc[project.projectName]
+                languageData[language].portfolio.projectDesc[
+                  project.projectName
+                ]
               }
               title={project.title}
               technologies={project.technologies}
@@ -117,7 +119,9 @@ const Portfolio = ({ languageData }) => {
               live={project.live}
               speed={project.speed}
               descTranslation={languageData[language].portfolio.description}
-              technologiesTranslation={languageData[language].portfolio.technologies}
+              technologiesTranslation={
+                languageData[language].portfolio.technologies
+              }
               buttonContent={languageData[language].portfolio.visit}
             />
           ))}
@@ -126,21 +130,22 @@ const Portfolio = ({ languageData }) => {
       <div className="cards-container  md:hidden min-h-screen  mt-5 p-0">
         <div id="cardsMobile" className="flex flex-col gap-3">
           {projects.map((project, id) => (
-              <MobileCard
-                activeTechnologies={activeTechnologies}
-                key={id}
-                id={`card_mobile_${id}`}
-                description={
-                  languageData[language].portfolio.projectDesc[project.projectName]
-                }
-                title={project.title}
-                technologies={project.technologies}
-                github={project.github}
-                live={project.live}
-                speed={project.speed}
-              />
-            )
-          )}
+            <MobileCard
+              activeTechnologies={activeTechnologies}
+              key={id}
+              id={`card_mobile_${id}`}
+              description={
+                languageData[language].portfolio.projectDesc[
+                  project.projectName
+                ]
+              }
+              title={project.title}
+              technologies={project.technologies}
+              github={project.github}
+              live={project.live}
+              speed={project.speed}
+            />
+          ))}
         </div>
       </div>
     </section>
