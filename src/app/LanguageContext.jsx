@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const LanguageContext = createContext();
 
@@ -28,7 +28,11 @@ const getLanguageShort = () => {
   return languageShort;
 };
 export const LanguageProvider = (props) => {
-  const [language, setLanguage] = useState(getLanguageShort());
+  const [language, setLanguage] = useState("EN");
+
+  useEffect(() => {
+    setLanguage(getLanguageShort());
+  }, []);
 
   return (
     <LanguageContext.Provider value={[language, setLanguage]}>
