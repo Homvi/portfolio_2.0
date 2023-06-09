@@ -12,6 +12,9 @@ const Card = ({
   live,
   speed,
   activeTechnologies,
+  buttonContent,
+  technologiesTranslation,
+  descTranslation,
 }) => {
   //add aos appearing
   let delay = id * 200;
@@ -30,11 +33,13 @@ const Card = ({
           </h3>
           <div className="p-3 flex flex-col h-full justify-between">
             <div className="min-h-[40%]">
-              <p className="font-nunitoRegular">Description</p>
+              <p className="font-nunitoRegular">{descTranslation}</p>
               <p className="font-nunitoXLight">{description}</p>
             </div>
             <div className="mt-5">
-              <p className="font-nunitoRegular mb-1">Technologies</p>
+              <p className="font-nunitoRegular mb-1">
+                {technologiesTranslation}
+              </p>
               <div className="flex  flex-wrap gap-1">
                 {technologies.map((tech, id) => (
                   <div
@@ -69,7 +74,7 @@ const Card = ({
             rel="noopener noreferrer"
             className="font-nunitoRegular text-sm bg-[#213340] py-[1px] px-5 rounded-full border-[1px]  border-[#384854] "
           >
-            Visit site
+            {buttonContent}
           </a>
           <a href={speed} target="_blank" rel="noopener noreferrer">
             <Image className="w-7 h-auto" src={speedLogo} alt="figma" />

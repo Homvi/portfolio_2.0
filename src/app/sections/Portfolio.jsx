@@ -114,6 +114,9 @@ const Portfolio = ({ languageData }) => {
               github={project.github}
               live={project.live}
               speed={project.speed}
+              descTranslation={languageData[language].portfolio.description}
+              technologiesTranslation={languageData[language].portfolio.technologies}
+              buttonContent={languageData[language].portfolio.visit}
             />
           ))}
         </div>
