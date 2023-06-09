@@ -1,15 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useContext, useState } from "react";
 import inkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import CVLogo from "../assets/CVLogo.svg";
 import languageLogoEn from "../assets/lang-logo/en.png";
 import languageLogoEs from "../assets/lang-logo/es.png";
 import languageLogoHu from "../assets/lang-logo/hu.png";
+import { LanguageContext } from "../LanguageContext";
 
-const Navbar = ({ isBorder }) => {
+const Navbar = ({ isBorder, languageData }) => {
+  const [language, setLanguage] = useContext(LanguageContext);
+  const [languageOpen, setLanguageOpen] = useState(false);
+
+  let languageObject = {
+    EN: {
+      src: languageLogoEn,
+    },
+    ES: {
+      src: languageLogoEs,
+    },
+    HU: {
+      src: languageLogoHu,
+    },
+  };
+
   return (
     <nav
       className={
@@ -20,7 +36,9 @@ const Navbar = ({ isBorder }) => {
     >
       <div className="flex gap-8 items-center text-[#F2F2F2] font-extralight">
         <a href="#about" data-aos="fade-down" data-aos-duration="300">
-          <p className="opacity-80 hover:opacity-100">About</p>
+          <p className="opacity-80 hover:opacity-100">
+            {languageData[language].menuItems.about}
+          </p>
         </a>
         <a
           data-aos="fade-down"
@@ -29,7 +47,9 @@ const Navbar = ({ isBorder }) => {
           className="opacity-80 hover:opacity-100"
           href={"#portfolio"}
         >
-          <p className="opacity-80 hover:opacity-100">Portfolio</p>
+          <p className="opacity-80 hover:opacity-100">
+            {languageData[language].menuItems.portfolio}
+          </p>
         </a>
         <a
           data-aos="fade-down"
@@ -39,7 +59,9 @@ const Navbar = ({ isBorder }) => {
           href={"#contact"}
         >
           {" "}
-          <p className="opacity-80 hover:opacity-100">Contact</p>
+          <p className="opacity-80 hover:opacity-100">
+            {languageData[language].menuItems.contact}
+          </p>
         </a>
       </div>
       <div className="hidden gap-10 xl:flex">
@@ -85,25 +107,59 @@ const Navbar = ({ isBorder }) => {
             alt="cv"
           />
         </a>
-        <div data-aos="fade-down" data-aos-duration="200" className=" flex">
-          <Image
-            priority
-            className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
-            src={languageLogoEn}
-            alt="english"
-          />
-          <Image
-            priority
-            className="opacity-50 hidden hover:opacity-100 mx-3  w-7 h-7 cursor-pointer"
-            src={languageLogoEs}
-            alt="espanol"
-          />
-          <Image
-            priority
-            className="opacity-50 hidden hover:opacity-100  w-7 h-7 cursor-pointer"
-            src={languageLogoHu}
-            alt="magyar"
-          />
+
+        {/* languages */}
+        <div
+          data-aos="fade-down"
+          data-aos-duration="200"
+          className="flex relative"
+        >
+          {!languageOpen && (
+            <Image
+              priority
+              className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+              src={languageObject[language].src}
+              onClick={(e) => {
+                setLanguageOpen(!languageOpen);
+              }}
+              alt="english"
+            />
+          )}
+          {languageOpen && (
+            <div className="flex gap-3">
+              <Image
+                priority
+                className="opacity-50  hover:opacity-100 w-7 h-7 cursor-pointer"
+                src={languageLogoEn}
+                onClick={(e) => {
+                  setLanguage("EN");
+                  setLanguageOpen(false);
+                }}
+                alt="english"
+              />
+
+              <Image
+                priority
+                onClick={(e) => {
+                  setLanguage("ES");
+                  setLanguageOpen(false);
+                }}
+                className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+                src={languageLogoEs}
+                alt="espanol"
+              />
+              <Image
+                priority
+                onClick={(e) => {
+                  setLanguage("HU");
+                  setLanguageOpen(false);
+                }}
+                className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+                src={languageLogoHu}
+                alt="magyar"
+              />
+            </div>
+          )}
         </div>
       </div>
     </nav>
