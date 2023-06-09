@@ -3,24 +3,30 @@ import profile from "../assets/img/profile.png";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../LanguageContext";
 
-const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, "The name must be minimum 2 characters!")
-    .max(50, "The name must be maximum 50 characters!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email address").required("Required"),
-  message: Yup.string()
-    .min(10, "Message should be at least 10 characters long")
-    .required("Required"),
-  privacy: Yup.boolean()
-    .oneOf([true], "You must agree the privacy policy")
-    .required("You must agree the privacy policy"),
-});
-
-const Contact = () => {
+const Contact = ({ languageData }) => {
+  const [language, setLanguage] = useContext(LanguageContext);
   const [status, setStatus] = useState("");
+
+  let alertContent = languageData[language].contact.alert;
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, alertContent.shortName)
+      .max(50, alertContent.longName)
+      .required(alertContent.required),
+    email: Yup.string()
+      .email(alertContent.invalidMail)
+      .required(alertContent.required),
+    message: Yup.string()
+      .min(10, alertContent.reqshortMessageired)
+      .required(alertContent.required),
+    privacy: Yup.boolean()
+      .oneOf([true], alertContent.privacy)
+      .required(alertContent.privacy),
+  });
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     setStatus("Pending");
@@ -51,7 +57,7 @@ const Contact = () => {
       className="relative z-10 text-[#F2F2F2] flex flex-col min-h-screen p-5 md:p-10 "
     >
       <h2 className="mt-10 text-4xl tracking-[20px] font-nunitoXLight text-center sm:text-left">
-        Contact
+        {languageData[language].contact.heading}
       </h2>
       <Formik
         initialValues={{ name: "", email: "", message: "", privacy: false }}
@@ -61,7 +67,9 @@ const Contact = () => {
         {({ isSubmitting }) => (
           <Form action="/" method="post" className="w-full md:w-[40%] my-10">
             <div className="flex flex-col mb-5">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">
+                {languageData[language].contact.formLabels.name}
+              </label>
               <Field
                 type="text"
                 id="name"
@@ -75,7 +83,9 @@ const Contact = () => {
               />
             </div>
             <div className="flex flex-col mb-5">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">
+                {languageData[language].contact.formLabels.mail}
+              </label>
               <Field
                 type="text"
                 id="email"
@@ -89,7 +99,9 @@ const Contact = () => {
               />
             </div>
             <div className="flex flex-col mb-5">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">
+                {languageData[language].contact.formLabels.message}
+              </label>
               <Field
                 as="textarea"
                 type="text"
@@ -108,13 +120,13 @@ const Contact = () => {
             <div className="flex flex-col">
               <div className="flex">
                 <Field type="checkbox" name="privacy" className="mr-2" />
-                <p>Privacy policy</p>
+                <p> {languageData[language].contact.privacy.heading}</p>
               </div>
               <p className="text-sm font-nunitoXLight">
-                I have read and agree to the
+                {languageData[language].contact.privacy.description}
                 <a href="/privacy" target="_blank" className="font-nunitoBold">
                   {" "}
-                  Privacy Policy.
+                  {languageData[language].contact.privacy.link}
                 </a>
               </p>
               <ErrorMessage
@@ -129,22 +141,24 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="bg-[#f2f2f21a] px-[20px] py-[2px] rounded-full text-sm border-[1px] border-[#f2f2f238] hover:bg-[#f2f2f241]"
               >
-                Send message
+                {languageData[language].contact.buttonContent}
               </button>
             </div>
             <div className="flex w-full justify-center text-sm">
               {status === "Error" && (
                 <div className="text-red-500 text-center">
-                  Upps! Something went wrong!
+                  {languageData[language].contact.formStatus.error}
                 </div>
               )}
               {status === "Success" && (
                 <div className="text-green-400 text-center">
-                  Success! Your message has been sent!
+                  {languageData[language].contact.formStatus.success}
                 </div>
               )}
               {status === "Pending" && (
-                <div className="text-center">Sending...</div>
+                <div className="text-center">
+                  {languageData[language].contact.formStatus.pending}
+                </div>
               )}
             </div>
           </Form>

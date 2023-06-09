@@ -108,7 +108,9 @@ const Portfolio = ({ languageData }) => {
               activeTechnologies={activeTechnologies}
               key={id}
               id={id}
-              description={project.description}
+              description={
+                languageData[language].portfolio.projectDesc[project.projectName]
+              }
               title={project.title}
               technologies={project.technologies}
               github={project.github}
