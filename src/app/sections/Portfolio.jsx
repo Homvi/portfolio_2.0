@@ -1,13 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import Card from "../components/Card";
 import MobileCard from "../components/MobileCard";
 import { projects } from "../../projectsData.js";
 import { technologies as tech } from "../../technologies.js";
 import Image from "next/image";
+import { LanguageContext } from "../LanguageContext";
 
-const Portfolio = () => {
+const Portfolio = ({ languageData }) => {
+  const [language, setLanguage] = useContext(LanguageContext);
   const [technologiesState, setTechnologiesState] = useState([]);
   const [activeTechnologies, setActiveTechnologies] = useState([]);
 
@@ -119,18 +121,21 @@ const Portfolio = () => {
       <div className="cards-container  md:hidden min-h-screen  mt-5 p-0">
         <div id="cardsMobile" className="flex flex-col gap-3">
           {projects.map((project, id) => (
-            <MobileCard
-              activeTechnologies={activeTechnologies}
-              key={id}
-              id={`card_mobile_${id}`}
-              description={project.description}
-              title={project.title}
-              technologies={project.technologies}
-              github={project.github}
-              live={project.live}
-              speed={project.speed}
-            />
-          ))}
+              <MobileCard
+                activeTechnologies={activeTechnologies}
+                key={id}
+                id={`card_mobile_${id}`}
+                description={
+                  languageData[language].portfolio.projectDesc[project.projectName]
+                }
+                title={project.title}
+                technologies={project.technologies}
+                github={project.github}
+                live={project.live}
+                speed={project.speed}
+              />
+            )
+          )}
         </div>
       </div>
     </section>

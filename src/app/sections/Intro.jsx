@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import profile from "../assets/img/profile.png";
+import { LanguageContext } from "../LanguageContext";
 
 const Intro = () => {
+
+  const [language, setLanguage] = useContext(LanguageContext);
+
   return (
     <section
         id="about"

@@ -4,6 +4,7 @@ import { technologies } from "./technologies";
 // Exporting an array of project objects. Each object represents a project, with its respective information
 export const projects = [
   {
+    projectName:"luxcode",
     title: "Luxcode",
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
@@ -21,6 +22,7 @@ export const projects = [
     ],
   },
   {
+    projectName:"goldkert",
     title: "Goldkert transfer",
     github: "https://github.com/Homvi/GoldkertTransfer",
     live: "https://goldkerttransfer.com/",
@@ -36,6 +38,7 @@ export const projects = [
     ],
   },
   {
+    projectName:"akman",
     title: "Akman Solutions",
     github: "https://github.com/Homvi/akmanSolutions",
     live: "https://akmansolutions.com/",
