@@ -69,8 +69,7 @@ export const data = {
       heading: "Szia, Ádám vagyok!",
       description:
         "A frontend fejlesztés nem csupán a hivatásom — ez a játszóterem.",
-      callToAction:
-        "Dobjuk fel kicsit a webet! 😎",
+      callToAction: "Dobjuk fel kicsit a webet! 😎",
     },
     /* portfolio */
     portfolio: {
@@ -127,15 +126,15 @@ export const data = {
     intro: {
       heading: "¡Hola, soy Adam!",
       description:
-        "El desarrollo frontend no es solo mi profesión, es mi campo de juego. Prospero en convertir conceptos creativos en aplicaciones en vivo y fáciles de usar.",
-      callToAction: "¿Listo para sacudir el mundo digital con mi código?",
+        "El desarrollo frontend no es solo mi profesión, es mi campo de juego. Me desarrollo eficazmente transformando conceptos creativos en aplicaciones en vivo y amigables para el usuario.",
+      callToAction: "¿Te atreves a revolucionar el mundo digital con mi código?",
     },
     /* portfolio */
     portfolio: {
       heading: "Portafolio",
       projectDesc: {
         luxcode:
-          "Un sitio web moderno e intuitivo construido con React, Next.js y Node, mostrando mis versátiles habilidades de desarrollo frontend.",
+          "Un sitio web moderno e intuitivo construido con React, Next.js y Node, donde muestro mis versátiles habilidades de desarrollo frontend.",
         goldkert:
           "Utilizando HTML, JavaScript y SCSS/CSS, desarrollé e implementé el sitio web fácil de usar de Goldkertbau Kft, con un diseño inspirado en HTML5UP.",
         akman:
