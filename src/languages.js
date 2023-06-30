@@ -76,11 +76,11 @@ export const data = {
       heading: "Portfólió",
       projectDesc: {
         luxcode:
-          "Egy modern és intuitív weboldal, amelyet React, Next.js, és Node segítségével készítettem, bemutatva a sokoldalú frontend fejlesztési képességeimet.",
+          "A weboldal design-ját Figmával terveztem meg. A frontend programozásához React-et valamit Next.js-t használtam. Ez a website saját felhasználásra készült.",
         goldkert:
-          "A Goldkertbau Kft felhasználóbarát weboldalát HTML, JavaScript, és SCSS/CSS felhasználásával fejlesztettem és telepítettem, az HTML5UP által inspirált design jegyében.",
+          "A Goldkertbau Kft. felhasználóbarát weboldalát HTML, JavaScript, és SCSS/CSS felhasználásával fejlesztettem és deploy-oltam, a design-hoz HTML5UP sablont használtam",
         akman:
-          "Frontend fejlesztőként alkottam meg az Akman Solutions oldalát HTML, JavaScript, és SCSS/CSS segítségével, az HTML5UP designját követve. Az oldal céginfoval és 'Kapcsolatfelvételi' űrlappal szolgál.",
+          "Az Akman Solutions Hungary Kft. oldalát HTML, JavaScript, és SCSS/CSS segítségével, a HTML5UP designját követve készítettem és deploy-oltam. Az oldal a cég bemutatását valamint a könnyebb kapcsolatfelvételt segíti elő.",
       },
       description: "Leírás",
       technologies: "Technológiák",
@@ -127,7 +127,8 @@ export const data = {
       heading: "¡Hola, soy Adam!",
       description:
         "El desarrollo frontend no es solo mi profesión, es mi campo de juego. Me desarrollo eficazmente transformando conceptos creativos en aplicaciones en vivo y amigables para el usuario.",
-      callToAction: "¿Te atreves a revolucionar el mundo digital con mi código?",
+      callToAction:
+        "¿Te atreves a revolucionar el mundo digital con mi código?",
     },
     /* portfolio */
     portfolio: {
