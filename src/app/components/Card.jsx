@@ -24,7 +24,7 @@ const Card = ({
         data-aos="fade-down"
         data-aos-duration="400"
         data-aos-delay={delay}
-        className="card bg-white/5 rounded-lg shadow-lg cursor-pointer mb-14 flex h-96 flex-col relative w-64"
+        className="card bg-white/5 rounded-lg shadow-lg cursor-pointer mb-14 flex h-[25rem] flex-col relative w-64"
         id={id}
       >
         <div className="bg-[#162937] flex flex-col rounded-md  inset-[2px]  absolute z-[2] ">
@@ -36,7 +36,7 @@ const Card = ({
               <p className="font-nunitoRegular">{descTranslation}</p>
               <p className="font-nunitoXLight">{description}</p>
             </div>
-            <div className="mt-5">
+            <div className="mt-2">
               <p className="font-nunitoRegular mb-1">
                 {technologiesTranslation}
               </p>
