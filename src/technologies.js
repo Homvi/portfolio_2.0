@@ -8,6 +8,8 @@ import javascript from "./app/assets/tech-logo/javascript.svg";
 import css from "./app/assets/tech-logo/css.svg";
 import html from "./app/assets/tech-logo/html.svg";
 import next from "./app/assets/tech-logo/next.svg";
+import vite from "./app/assets/tech-logo/vite.svg"
+import daisy from "./app/assets/tech-logo/daisy.svg"
 
 // Creating an object where each technology is associated with its name and the imported logo
 export const technologies = {
@@ -46,5 +48,13 @@ export const technologies = {
   next: {
     name: "Next.js",
     src: next,
+  },
+  vite: {
+    name: "Vite.js",
+    src: vite,
+  },
+  daisy: {
+    name: "DaisyUI",
+    src: daisy,
   },
 };

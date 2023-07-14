@@ -4,13 +4,14 @@ import { technologies } from "./technologies";
 // Exporting an array of project objects. Each object represents a project, with its respective information
 export const projects = [
   {
-    projectName:"luxcode",
+    projectName: "luxcode",
     title: "Luxcode",
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
     speed:
       "https://pagespeed.web.dev/analysis/https-luxcode-dev/qkgacrtoyi?form_factor=desktop",
-    description: " A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
+    description:
+      " A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
     technologies: [
       technologies.react,
       technologies.next,
@@ -22,7 +23,7 @@ export const projects = [
     ],
   },
   {
-    projectName:"goldkert",
+    projectName: "goldkert",
     title: "Goldkert transfer",
     github: "https://github.com/Homvi/GoldkertTransfer",
     live: "https://goldkerttransfer.com/",
@@ -38,7 +39,24 @@ export const projects = [
     ],
   },
   {
-    projectName:"akman",
+    projectName: "karako",
+    title: "Karakószörcsök",
+    github: "https://github.com/Homvi/karakoszorcsok_vite",
+    live: "https://karakoszorcsok.com/",
+    speed:
+      "https://pagespeed.web.dev/analysis/https-karakoszorcsok-com/tond2mborx?form_factor=desktop",
+    description:
+      "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
+    technologies: [
+      technologies.react,
+      technologies.tailwind,
+      technologies.git,
+      technologies.vite,
+      technologies.daisy,
+    ],
+  },
+  {
+    projectName: "akman",
     title: "Akman Solutions",
     github: "https://github.com/Homvi/akmanSolutions",
     live: "https://akmansolutions.com/",
@@ -53,4 +71,5 @@ export const projects = [
       technologies.git,
     ],
   },
+ 
 ];

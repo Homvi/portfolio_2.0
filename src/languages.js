@@ -23,6 +23,8 @@ export const data = {
           "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
         akman:
           "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
+        karako:
+          "This project involves creating a modern, dynamic website for my hometown using React and Vite. Deployed via Git, it's a concise digital representation of the community, optimized for user engagement and performance.",
       },
       description: "Description",
       technologies: "Technologies",
@@ -81,6 +83,8 @@ export const data = {
           "A Goldkertbau Kft. felhasználóbarát weboldalát HTML, JavaScript, és SCSS/CSS felhasználásával fejlesztettem és deploy-oltam, a design-hoz HTML5UP sablont használtam",
         akman:
           "Az Akman Solutions Hungary Kft. oldalát HTML, JavaScript, és SCSS/CSS segítségével, a HTML5UP designját követve készítettem és deploy-oltam. Az oldal a cég bemutatását valamint a könnyebb kapcsolatfelvételt segíti elő.",
+        karako:
+          "A honlap a lakosok tájékoztatását valamint a község bemutatását szolgálja. A weboldal elkészítéséhez Vite + React, Git valamint a DaisyUI-t használtam.",
       },
       description: "Leírás",
       technologies: "Technológiák",
@@ -140,6 +144,8 @@ export const data = {
           "Utilizando HTML, JavaScript y SCSS/CSS, desarrollé e implementé el sitio web fácil de usar de Goldkertbau Kft, con un diseño inspirado en HTML5UP.",
         akman:
           "Como desarrollador frontend, diseñé el sitio de Akman Solutions utilizando HTML, JavaScript y SCSS/CSS, inspirado en diseños de HTML5UP. El sitio ofrece información de la empresa y un formulario 'Ponte en contacto'.",
+        karako:
+          "El sitio web sirve para informar a los residentes y presentar la ciudad. Para la creación del sitio web, utilicé Vite + React, Git y DaisyUI.",
       },
       description: "Descripción",
       technologies: "Tecnologías",
