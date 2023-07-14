@@ -9,7 +9,7 @@ export const projects = [
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
     speed:
-      "https://pagespeed.web.dev/analysis/https-luxcode-dev/qkgacrtoyi?form_factor=desktop",
+      "https://pagespeed.web.dev/analysis/https-luxcode-dev/h1767nb97x?form_factor=mobile",
     description:
       " A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
     technologies: [

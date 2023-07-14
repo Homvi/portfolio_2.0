@@ -40,8 +40,13 @@ const MobileCard = ({
             ))}
           </div>
         </div>
-        <div className="flex flex-col p-2 justify-around items-center w-16 bg-[#1F2E3B]">
-          <a href={speed} target="_blank" rel="noopener noreferrer">
+        <div className="flex flex-col p-2  justify-around items-center w-16 bg-[#1F2E3B]">
+          <a
+            href={speed}
+            target="_blank"
+            className="w-5 animate-bounce"
+            rel="noopener noreferrer"
+          >
             <Image className="w-auto h-6" src={speedLogo} alt="figma" />
           </a>
           <a href={github} target="_blank" rel="noopener noreferrer">
