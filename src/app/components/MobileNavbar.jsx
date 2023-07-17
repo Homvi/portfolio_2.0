@@ -50,58 +50,58 @@ const MobileNavbar = () => {
         >
           <Image
             priority
-            className="opacity-80 h-[30px]"
+            className="opacity-80 h-[30px] animate-bounce"
             src={CVLogo}
             alt="CV"
             height={30}
           />
         </a>
         {!languageOpen && (
+          <Image
+            priority
+            className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+            src={languageObject[language].src}
+            onClick={(e) => {
+              setLanguageOpen(!languageOpen);
+            }}
+            alt="english"
+          />
+        )}
+        {languageOpen && (
+          <div className="flex gap-3">
             <Image
               priority
-              className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
-              src={languageObject[language].src}
+              className="opacity-50  hover:opacity-100 w-7 h-7 cursor-pointer"
+              src={languageLogoEn}
               onClick={(e) => {
-                setLanguageOpen(!languageOpen);
+                setLanguage("EN");
+                setLanguageOpen(false);
               }}
               alt="english"
             />
-          )}
-          {languageOpen && (
-            <div className="flex gap-3">
-              <Image
-                priority
-                className="opacity-50  hover:opacity-100 w-7 h-7 cursor-pointer"
-                src={languageLogoEn}
-                onClick={(e) => {
-                  setLanguage("EN");
-                  setLanguageOpen(false);
-                }}
-                alt="english"
-              />
 
-              <Image
-                priority
-                onClick={(e) => {
-                  setLanguage("ES");
-                  setLanguageOpen(false);
-                }}
-                className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
-                src={languageLogoEs}
-                alt="espanol"
-              />
-              <Image
-                priority
-                onClick={(e) => {
-                  setLanguage("HU");
-                  setLanguageOpen(false);
-                }}
-                className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
-                src={languageLogoHu}
-                alt="magyar"
-              />
-            </div>
-          )}
+            <Image
+              priority
+              onClick={(e) => {
+                setLanguage("ES");
+                setLanguageOpen(false);
+              }}
+              className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+              src={languageLogoEs}
+              alt="espanol"
+            />
+            <Image
+              priority
+              onClick={(e) => {
+                setLanguage("HU");
+                setLanguageOpen(false);
+              }}
+              className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
+              src={languageLogoHu}
+              alt="magyar"
+            />
+          </div>
+        )}
       </div>
     </nav>
   );
