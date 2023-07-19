@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "../assets/img/profile.png";
+import profile from "../assets/img/profile.webp";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";

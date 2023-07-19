@@ -2,7 +2,7 @@
 
 import React, { useContext } from "react";
 import Image from "next/image";
-import profile from "../assets/img/profile.png";
+import profile from "../assets/img/profile.webp";
 import { LanguageContext } from "../LanguageContext";
 
 const Intro = ({ languageData }) => {
