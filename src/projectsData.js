@@ -23,22 +23,6 @@ export const projects = [
     ],
   },
   {
-    projectName: "goldkert",
-    title: "Goldkert transfer",
-    github: "https://github.com/Homvi/GoldkertTransfer",
-    live: "https://goldkerttransfer.com/",
-    speed:
-      "https://pagespeed.web.dev/analysis?url=https://goldkerttransfer.com/&form_factor=desktop",
-    description:
-      "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
-    technologies: [
-      technologies.html,
-      technologies.css,
-      technologies.javascript,
-      technologies.git,
-    ],
-  },
-  {
     projectName: "karako",
     title: "Karakószörcsök",
     github: "https://github.com/Homvi/karakoszorcsok_vite",
@@ -55,6 +39,23 @@ export const projects = [
       technologies.daisy,
     ],
   },
+  {
+    projectName: "goldkert",
+    title: "Goldkert transfer",
+    github: "https://github.com/Homvi/GoldkertTransfer",
+    live: "https://goldkerttransfer.com/",
+    speed:
+      "https://pagespeed.web.dev/analysis?url=https://goldkerttransfer.com/&form_factor=desktop",
+    description:
+      "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
+    technologies: [
+      technologies.html,
+      technologies.css,
+      technologies.javascript,
+      technologies.git,
+    ],
+  },
+  
   {
     projectName: "akman",
     title: "Akman Solutions",
