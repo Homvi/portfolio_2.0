@@ -6,7 +6,7 @@ import AOS from "aos";
 
 const Landing = () => {
   let name = "ADAM HONVEDO";
-  let title = "frontend developer";
+  let title = "Web Developer";
   const arrayOfLettersOfName = name.split("");
   const arrayOfLettersOfTitle = title.split("");
 

@@ -10,7 +10,7 @@ export const data = {
     intro: {
       heading: "Hi, I'm Adam!",
       description:
-        "Frontend development isn't just my profession — it's my playground. I thrive in turning creative concepts into live, user-friendly applications.",
+        "Web development isn't just my profession — it's my playground. I thrive in turning creative concepts into live, user-friendly applications.",
       callToAction: "Ready to rock the digital world with my code?",
     },
     /* portfolio */
@@ -70,7 +70,7 @@ export const data = {
     intro: {
       heading: "Szia, Ádám vagyok!",
       description:
-        "A frontend fejlesztés nem csupán a hivatásom — ez a játszóterem.",
+        "A  webfejlesztés nem csupán a hivatásom — ez a játszóterem.",
       callToAction: "Dobjuk fel kicsit a webet! 😎",
     },
     /* portfolio */
@@ -130,7 +130,7 @@ export const data = {
     intro: {
       heading: "¡Hola, soy Adam!",
       description:
-        "El desarrollo frontend no es solo mi profesión, es mi campo de juego. Me desarrollo eficazmente transformando conceptos creativos en aplicaciones en vivo y amigables para el usuario.",
+        "El desarrollo web no es solo mi profesión, es mi campo de juego. Me desarrollo eficazmente transformando conceptos creativos en aplicaciones en vivo y amigables para el usuario.",
       callToAction:
         "¿Te atreves a revolucionar el mundo digital con mi código?",
     },
