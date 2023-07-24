@@ -45,8 +45,8 @@ const MobileNavbar = () => {
           />
         </a>
         <a
-          href="/assets/CV/HonvedoAdam_Frontend_CV.pdf"
-          download="Adam_Honvedo_CV_Frontend"
+          href="/assets/CV/HonvedoAdam_FullStack_CV.pdf"
+          download="Adam_Honvedo_CV"
         >
           <Image
             priority
