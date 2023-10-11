@@ -4,17 +4,31 @@ import { technologies } from "./technologies";
 // Exporting an array of project objects. Each object represents a project, with its respective information
 export const projects = [
   {
+    projectName: "sneaker",
+    title: "E-commerce",
+    github: "https://github.com/Homvi/E-commerce-product-page",
+    live: "https://e-commerce-adakin.netlify.app/",
+    speed:
+      "https://pagespeed.web.dev/analysis/https-e-commerce-adakin-netlify-app/8n5ub52qyq?form_factor=desktop",
+    technologies: [
+      technologies.react,
+      technologies.tailwind,
+      technologies.git,
+      technologies.sass,
+      technologies.next,
+      technologies.typescript,
+      technologies.redux,
+    ],
+  },
+  {
     projectName: "luxcode",
     title: "Luxcode",
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
     speed:
-      "https://pagespeed.web.dev/analysis/https-luxcode-dev/h1767nb97x?form_factor=mobile",
-    description:
-      " A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
+      "https://pagespeed.web.dev/analysis/https-luxcode-dev/u7sfm5p1og?form_factor=desktop",
     technologies: [
       technologies.react,
-      technologies.next,
       technologies.javascript,
       technologies.node,
       technologies.figma,
@@ -23,14 +37,28 @@ export const projects = [
     ],
   },
   {
+    projectName: "chuck",
+    title: "Chuck Norris Jokes",
+    github: "https://github.com/Homvi/chuck-norris-jokes",
+    live: "https://homvi.github.io/chuck-norris-jokes/",
+    speed:
+      "https://pagespeed.web.dev/analysis/https-homvi-github-io-chuck-norris-jokes/52zic5pl3a?form_factor=mobile",
+    technologies: [
+      technologies.html,
+      technologies.css,
+      technologies.sass,
+      technologies.javascript,
+      technologies.typescript,
+      technologies.git,
+    ],
+  },
+  /* {
     projectName: "karako",
     title: "Karakószörcsök",
     github: "https://github.com/Homvi/karakoszorcsok_vite",
     live: "https://karakoszorcsok.com/",
     speed:
       "https://pagespeed.web.dev/analysis/https-karakoszorcsok-com/tond2mborx?form_factor=desktop",
-    description:
-      "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
     technologies: [
       technologies.react,
       technologies.tailwind,
@@ -46,16 +74,15 @@ export const projects = [
     live: "https://goldkerttransfer.com/",
     speed:
       "https://pagespeed.web.dev/analysis?url=https://goldkerttransfer.com/&form_factor=desktop",
-    description:
-      "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
+
     technologies: [
       technologies.html,
       technologies.css,
       technologies.javascript,
       technologies.git,
     ],
-  },
-  
+  }, 
+
   {
     projectName: "akman",
     title: "Akman Solutions",
@@ -63,14 +90,11 @@ export const projects = [
     live: "https://akmansolutions.com/",
     speed:
       "https://pagespeed.web.dev/analysis?url=https://akmansolutions.com/&form_factor=desktop",
-    description:
-      "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
     technologies: [
       technologies.html,
       technologies.css,
       technologies.javascript,
       technologies.git,
     ],
-  },
- 
+  },*/
 ];
