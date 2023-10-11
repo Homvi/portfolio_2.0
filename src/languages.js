@@ -25,6 +25,10 @@ export const data = {
           "As a frontend developer, I crafted Akman Solutions' site using HTML, JavaScript, and SCSS/CSS, inspired by HTML5UP designs. The site offers company info and a 'Get in Touch' form.",
         karako:
           "This project involves creating a modern, dynamic website for my hometown using React and Vite. Deployed via Git, it's a concise digital representation of the community, optimized for user engagement and performance.",
+        sneaker:
+          "A modern and intuitive website built with React, Next.js, and Redux as part of the Frontend Mentor challenge, highlighting my adaptability and expertise in web development.",
+        chuck:
+          "Dive into classic Chuck Norris jokes with my app, built using HTML, CSS, TypeScript, and given a retro touch with NES.css. Enjoy timeless humor with an 8-bit gaming aesthetic.",
       },
       description: "Description",
       technologies: "Technologies",
@@ -85,6 +89,10 @@ export const data = {
           "Az Akman Solutions Hungary Kft. oldalát HTML, JavaScript, és SCSS/CSS segítségével, a HTML5UP designját követve készítettem és deploy-oltam. Az oldal a cég bemutatását valamint a könnyebb kapcsolatfelvételt segíti elő.",
         karako:
           "A honlap a lakosok tájékoztatását valamint a község bemutatását szolgálja. A weboldal elkészítéséhez Vite + React, Git valamint a DaisyUI-t használtam.",
+        sneaker:
+          "Egy modern és intuitív weboldal, amely egy Frontend Mentor kihívás design-ja alapján készült React, Next.js és Redux felhasználásával",
+        chuck:
+          "Merülj el Chuck Norris klasszikus vicceiben ezzel az alkalmazással, melyet HTML, CSS, és TypeScript segítségével készítettem. Élvezd az örökzöld humorral vegyített 8-bites játék esztétikát!",
       },
       description: "Leírás",
       technologies: "Technológiák",
@@ -146,6 +154,10 @@ export const data = {
           "Como desarrollador frontend, diseñé el sitio de Akman Solutions utilizando HTML, JavaScript y SCSS/CSS, inspirado en diseños de HTML5UP. El sitio ofrece información de la empresa y un formulario 'Ponte en contacto'.",
         karako:
           "El sitio web sirve para informar a los residentes y presentar la ciudad. Para la creación del sitio web, utilicé Vite + React, Git y DaisyUI.",
+        sneaker:
+          "Un sitio web moderno e intuitivo construido con React, Next.js y Redux como parte del desafío de Frontend Mentor, destacando mi adaptabilidad y experiencia en desarrollo web.",
+        chuck:
+          "Sumérgete en clásicas bromas de Chuck Norris con mi aplicación, construida usando HTML, CSS, TypeScript y dándole un toque retro con NES.css. Disfruta del humor atemporal con una estética de juego en 8 bits.",
       },
       description: "Descripción",
       technologies: "Tecnologías",
