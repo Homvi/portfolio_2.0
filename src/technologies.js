@@ -8,8 +8,11 @@ import javascript from "./app/assets/tech-logo/javascript.svg";
 import css from "./app/assets/tech-logo/css.svg";
 import html from "./app/assets/tech-logo/html.svg";
 import next from "./app/assets/tech-logo/next.svg";
-import vite from "./app/assets/tech-logo/vite.svg"
-import daisy from "./app/assets/tech-logo/daisy.svg"
+import vite from "./app/assets/tech-logo/vite.svg";
+import daisy from "./app/assets/tech-logo/daisy.svg";
+import typescript from "./app/assets/tech-logo/typescript.svg";
+import sass from "./app/assets/tech-logo/sass.svg";
+import redux from "./app/assets/tech-logo/redux.png";
 
 // Creating an object where each technology is associated with its name and the imported logo
 export const technologies = {
@@ -56,5 +59,17 @@ export const technologies = {
   daisy: {
     name: "DaisyUI",
     src: daisy,
+  },
+  typescript: {
+    name: "Typescript",
+    src: typescript,
+  },
+  redux: {
+    name: "Redux",
+    src: redux,
+  },
+  sass: {
+    name: "Sass",
+    src: sass,
   },
 };
