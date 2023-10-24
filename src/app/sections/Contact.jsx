@@ -32,11 +32,11 @@ const Contact = ({ languageData }) => {
     setStatus("Pending");
     try {
       const response = await axios.post(
-        "https://stormy-badlands-81408.herokuapp.com/submit-form",
+        "https://portfolio-2-0-backend-email.onrender.com/submit-form",
         values
       );
 
-      console.log(response.data);
+      //console.log(response.data);
 
       // Clear form fields and stop submitting
       resetForm();
