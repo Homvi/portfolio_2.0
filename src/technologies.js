@@ -13,6 +13,7 @@ import daisy from "./app/assets/tech-logo/daisy.svg";
 import typescript from "./app/assets/tech-logo/typescript.svg";
 import sass from "./app/assets/tech-logo/sass.svg";
 import redux from "./app/assets/tech-logo/redux.png";
+import socket from "./app/assets/tech-logo/socket.png";
 
 // Creating an object where each technology is associated with its name and the imported logo
 export const technologies = {
@@ -71,5 +72,9 @@ export const technologies = {
   sass: {
     name: "Sass",
     src: sass,
+  },
+  socket: {
+    name: "Socket.io",
+    src: socket,
   },
 };
