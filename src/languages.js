@@ -29,6 +29,7 @@ export const data = {
           "A modern and intuitive website built with React, Next.js, and Redux as part of the Frontend Mentor challenge, highlighting my adaptability and expertise in web development.",
         chuck:
           "Dive into classic Chuck Norris jokes with my app, built using HTML, CSS, TypeScript, and given a retro touch with NES.css. Enjoy timeless humor with an 8-bit gaming aesthetic.",
+        chat: "Chat live with your friends. Under development!",
       },
       description: "Description",
       technologies: "Technologies",
@@ -93,6 +94,7 @@ export const data = {
           "Egy modern és intuitív weboldal, amely egy Frontend Mentor kihívás design-ja alapján készült React, Next.js és Redux felhasználásával",
         chuck:
           "Merülj el Chuck Norris klasszikus vicceiben ezzel az alkalmazással, melyet HTML, CSS, és TypeScript segítségével készítettem. Élvezd az örökzöld humorral vegyített 8-bites játék esztétikát!",
+        chat: "Csevegj élőben barátaiddal. Fejlesztés alatt!",
       },
       description: "Leírás",
       technologies: "Technológiák",
@@ -158,6 +160,7 @@ export const data = {
           "Un sitio web moderno e intuitivo construido con React, Next.js y Redux como parte del desafío de Frontend Mentor, destacando mi adaptabilidad y experiencia en desarrollo web.",
         chuck:
           "Sumérgete en clásicas bromas de Chuck Norris con mi aplicación, construida usando HTML, CSS, TypeScript y dándole un toque retro con NES.css. Disfruta del humor atemporal con una estética de juego en 8 bits.",
+        chat: "Chatea en vivo con tus amigos. ¡En desarrollo!",
       },
       description: "Descripción",
       technologies: "Tecnologías",
