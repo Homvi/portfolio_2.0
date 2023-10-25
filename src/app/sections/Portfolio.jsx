@@ -114,6 +114,7 @@ const Portfolio = ({ languageData }) => {
                 ]
               }
               title={project.title}
+              isUnderDevelopment={project.isUnderDevelopment}
               technologies={project.technologies}
               github={project.github}
               live={project.live}
@@ -143,6 +144,7 @@ const Portfolio = ({ languageData }) => {
               technologies={project.technologies}
               github={project.github}
               live={project.live}
+              isUnderDevelopment={project.isUnderDevelopment}
               speed={project.speed}
             />
           ))}
