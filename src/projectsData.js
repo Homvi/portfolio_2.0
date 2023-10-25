@@ -5,6 +5,7 @@ import { technologies } from "./technologies";
 export const projects = [
   {
     projectName: "sneaker",
+    isUnderDevelopment: false,
     title: "E-commerce",
     github: "https://github.com/Homvi/E-commerce-product-page",
     live: "https://e-commerce-adakin.netlify.app/",
@@ -22,6 +23,7 @@ export const projects = [
   },
   {
     projectName: "luxcode",
+    isUnderDevelopment: false,
     title: "Luxcode",
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
@@ -38,6 +40,7 @@ export const projects = [
   },
   {
     projectName: "chuck",
+    isUnderDevelopment: false,
     title: "Chuck Norris Jokes",
     github: "https://github.com/Homvi/chuck-norris-jokes",
     live: "https://homvi.github.io/chuck-norris-jokes/",
@@ -50,6 +53,24 @@ export const projects = [
       technologies.javascript,
       technologies.typescript,
       technologies.git,
+    ],
+  },
+  {
+    projectName: "chat",
+    isUnderDevelopment: true,
+    title: "TatooineTweets",
+    github: "https://tatooinetweets.netlify.app/",
+    live: "https://tatooinetweets.netlify.app/",
+    speed: "https://tatooinetweets.netlify.app/",
+    technologies: [
+      technologies.html,
+      technologies.css,
+      technologies.sass,
+      technologies.javascript,
+      technologies.typescript,
+      technologies.git,
+      technologies.react,
+      technologies.socket,
     ],
   },
   /* {
