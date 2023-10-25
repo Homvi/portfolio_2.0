@@ -13,12 +13,14 @@ const MobileCard = ({
   live,
   speed,
   activeTechnologies,
+  isUnderDevelopment,
 }) => {
   return (
     <div className="w-full bg-[#ffffff0c]  rounded-lg backdrop-blur-md custom-white-border">
       <div className="bg-[#1F2E3B] absolute  w-fit px-3 py-[2px] text-sm font-nunitoLight rounded-tl-lg rounded-br-lg">
         {title}
       </div>
+      { isUnderDevelopment && <div className="text-center font-nunitoXLight text-yellow-200">Under development</div>} 
       <div className="content  flex">
         <div className="p-3 mt-5">
           <p className="mb-2 font-nunitoXLight">{description}</p>
