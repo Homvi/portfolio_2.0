@@ -26,7 +26,7 @@ export const projects = [
     github: "https://github.com/Homvi/luxcode",
     live: "https://luxcode.dev/",
     speed:
-      "https://pagespeed.web.dev/analysis/https-luxcode-dev/u7sfm5p1og?form_factor=desktop",
+      "https://pagespeed.web.dev/analysis/https-luxcode-dev/4n6sr92pn4?form_factor=desktop",
     technologies: [
       technologies.react,
       technologies.javascript,
