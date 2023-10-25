@@ -15,6 +15,7 @@ const Card = ({
   buttonContent,
   technologiesTranslation,
   descTranslation,
+  isUnderDevelopment,
 }) => {
   //add aos appearing
   let delay = id * 200;
@@ -31,6 +32,7 @@ const Card = ({
           <h3 className="text-center rounded-b-md mb-2 font-nunitoXLight bg-[#1F2E3B] px-4 py-1 w-fit mx-auto mt-0">
             {title}
           </h3>
+         { isUnderDevelopment && <div className="text-center font-nunitoXLight text-yellow-200">Under development</div>} 
           <div className="p-3 flex flex-col h-full justify-between">
             <div className="min-h-[40%]">
               <p className="font-nunitoRegular">{descTranslation}</p>
