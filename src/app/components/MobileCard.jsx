@@ -50,7 +50,7 @@ const MobileCard = ({
           <a
             href={speed}
             target="_blank"
-            className="w-5 animate-bounce"
+            className="w-5"
             rel="noopener noreferrer"
           >
             <Image className="w-auto h-6" src={speedLogo} alt="figma" />
