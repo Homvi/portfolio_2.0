@@ -102,7 +102,7 @@ const Navbar = ({ isBorder, languageData }) => {
         >
           <Image
             priority
-            className="opacity-95 hover:opacity-100 animate-bounce"
+            className="opacity-95 hover:opacity-100"
             src={CVLogo}
             alt="cv"
           />

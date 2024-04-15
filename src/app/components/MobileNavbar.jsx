@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
-import inkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
-import CVLogo from "../assets/CVLogo.svg";
-import Image from "next/image";
-import languageLogoEn from "../assets/lang-logo/en.webp";
-import languageLogoEs from "../assets/lang-logo/es.webp";
-import languageLogoHu from "../assets/lang-logo/hu.webp";
-import { LanguageContext } from "../LanguageContext";
+import React, { useContext, useState } from 'react';
+import inkedin from '../assets/linkedin.svg';
+import github from '../assets/github.svg';
+import CVLogo from '../assets/CVLogo.svg';
+import Image from 'next/image';
+import languageLogoEn from '../assets/lang-logo/en.webp';
+import languageLogoEs from '../assets/lang-logo/es.webp';
+import languageLogoHu from '../assets/lang-logo/hu.webp';
+import { LanguageContext } from '../LanguageContext';
 
 const MobileNavbar = () => {
   const [language, setLanguage] = useContext(LanguageContext);
@@ -26,7 +26,10 @@ const MobileNavbar = () => {
   return (
     <nav className="fixed z-20 bottom-0 xl:hidden flex justify-center  w-full py-2 px-8  border-t-[1px] backdrop-blur-md border-[#ffffff22]">
       <div className="flex justify-around w-full ">
-        <a href="https://www.linkedin.com/in/adamhonvedo/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/adamhonvedo/"
+          target="_blank"
+        >
           <Image
             priority
             className="opacity-80 h-[30px] w-auto"
@@ -35,7 +38,10 @@ const MobileNavbar = () => {
             height={30}
           />
         </a>
-        <a href="https://github.com/Homvi" target="_blank">
+        <a
+          href="https://github.com/Homvi"
+          target="_blank"
+        >
           <Image
             priority
             className="opacity-100  h-[30px]"
@@ -50,7 +56,7 @@ const MobileNavbar = () => {
         >
           <Image
             priority
-            className="opacity-80 h-[30px] animate-bounce"
+            className="h-[30px]"
             src={CVLogo}
             alt="CV"
             height={30}
@@ -74,7 +80,7 @@ const MobileNavbar = () => {
               className="opacity-50  hover:opacity-100 w-7 h-7 cursor-pointer"
               src={languageLogoEn}
               onClick={(e) => {
-                setLanguage("EN");
+                setLanguage('EN');
                 setLanguageOpen(false);
               }}
               alt="english"
@@ -83,7 +89,7 @@ const MobileNavbar = () => {
             <Image
               priority
               onClick={(e) => {
-                setLanguage("ES");
+                setLanguage('ES');
                 setLanguageOpen(false);
               }}
               className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
@@ -93,7 +99,7 @@ const MobileNavbar = () => {
             <Image
               priority
               onClick={(e) => {
-                setLanguage("HU");
+                setLanguage('HU');
                 setLanguageOpen(false);
               }}
               className="opacity-50 hover:opacity-100 w-7 h-7 cursor-pointer"
