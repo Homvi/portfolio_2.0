@@ -3,9 +3,9 @@ import inkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import CVLogo from "../assets/CVLogo.svg";
 import Image from "next/image";
-import languageLogoEn from "../assets/lang-logo/en.png";
-import languageLogoEs from "../assets/lang-logo/es.png";
-import languageLogoHu from "../assets/lang-logo/hu.png";
+import languageLogoEn from "../assets/lang-logo/en.webp";
+import languageLogoEs from "../assets/lang-logo/es.webp";
+import languageLogoHu from "../assets/lang-logo/hu.webp";
 import { LanguageContext } from "../LanguageContext";
 
 const MobileNavbar = () => {
