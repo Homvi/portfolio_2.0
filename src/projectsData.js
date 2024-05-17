@@ -18,7 +18,8 @@ export const projects = [
       technologies.redux,
       technologies.tailwind,
       technologies.daisy,
-      technologies.vite
+      technologies.vite,
+      technologies.react
     ],
   },
   {
