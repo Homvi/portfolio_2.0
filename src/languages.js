@@ -13,12 +13,14 @@ export const data = {
         "Web development isn't just my profession — it's my playground. I thrive in turning creative concepts into live, user-friendly applications.",
       callToAction: "Ready to rock the digital world with my code?",
     },
-    /* portfolio */
+    /* portfolio en*/
     portfolio: {
       heading: "Portfolio",
       projectDesc: {
         luxcode:
           "A modern and intuitive website built with React, Next.js, and Node, showcasing my versatile frontend development skills.",
+        exprilliant:
+          "Exprilliant is a web app that teaches common expressions in a playful and engaging way.",
         goldkert:
           "Employing HTML, JavaScript, and SCSS/CSS, I developed and deployed Goldkertbau Kft's user-friendly website, featuring an HTML5UP-inspired design.",
         akman:
@@ -82,6 +84,8 @@ export const data = {
     portfolio: {
       heading: "Portfólió",
       projectDesc: {
+        exprilliant:
+        "Exprilliant egy webalkalmazás, amely játékos és szórakoztató módon tanítja a gyakori kifejezéseket.",
         luxcode:
           "A weboldal design-ját Figmával terveztem meg. A frontend programozásához React-et valamit Next.js-t használtam. Ez a website saját felhasználásra készült.",
         goldkert:
@@ -148,6 +152,8 @@ export const data = {
     portfolio: {
       heading: "Portafolio",
       projectDesc: {
+        exprilliant:
+        "Exprilliant es una aplicación web que enseña expresiones comunes de manera lúdica y atractiva.",
         luxcode:
           "Un sitio web moderno e intuitivo construido con React, Next.js y Node, donde muestro mis versátiles habilidades de desarrollo frontend.",
         goldkert:

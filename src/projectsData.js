@@ -4,6 +4,24 @@ import { technologies } from "./technologies";
 // Exporting an array of project objects. Each object represents a project, with its respective information
 export const projects = [
   {
+    projectName: "exprilliant",
+    isUnderDevelopment: true,
+    title: "Exprilliant",
+    github: "https://github.com/Homvi/regexp-live",
+    live: "https://exprilliant.netlify.app/",
+    speed:
+      "https://pagespeed.web.dev/analysis/https-exprilliant-netlify-app/1db1k1vjpi?form_factor=desktop",
+    technologies: [
+      technologies.typescript,
+      technologies.git,
+      technologies.figma,
+      technologies.redux,
+      technologies.tailwind,
+      technologies.daisy,
+      technologies.vite
+    ],
+  },
+  {
     projectName: "sneaker",
     isUnderDevelopment: false,
     title: "E-commerce",
@@ -38,7 +56,7 @@ export const projects = [
       technologies.tailwind,
     ],
   },
-  {
+  /* {
     projectName: "chuck",
     isUnderDevelopment: false,
     title: "Chuck Norris Jokes",
@@ -54,10 +72,11 @@ export const projects = [
       technologies.typescript,
       technologies.git,
     ],
-  },
+  }, */
+ 
   {
     projectName: "chat",
-    isUnderDevelopment: true,
+    isUnderDevelopment: false,
     title: "TatooineTweets",
     github: "https://tatooinetweets.netlify.app/",
     live: "https://tatooinetweets.netlify.app/",
