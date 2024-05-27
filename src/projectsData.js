@@ -23,6 +23,24 @@ export const projects = [
     ],
   },
   {
+    projectName: "luxcode",
+    isUnderDevelopment: false,
+    title: "Luxcode",
+    github: "https://github.com/Homvi/luxcode",
+    live: "https://luxcode.dev/",
+    speed:
+      "https://pagespeed.web.dev/analysis/https-luxcode-dev/4n6sr92pn4?form_factor=desktop",
+    technologies: [
+      technologies.react,
+      technologies.javascript,
+      technologies.node,
+      technologies.figma,
+      technologies.git,
+      technologies.tailwind,
+      technologies.next,
+    ],
+  },
+  {
     projectName: "sneaker",
     isUnderDevelopment: false,
     title: "E-commerce",
@@ -38,23 +56,6 @@ export const projects = [
       technologies.next,
       technologies.typescript,
       technologies.redux,
-    ],
-  },
-  {
-    projectName: "luxcode",
-    isUnderDevelopment: false,
-    title: "Luxcode",
-    github: "https://github.com/Homvi/luxcode",
-    live: "https://luxcode.dev/",
-    speed:
-      "https://pagespeed.web.dev/analysis/https-luxcode-dev/4n6sr92pn4?form_factor=desktop",
-    technologies: [
-      technologies.react,
-      technologies.javascript,
-      technologies.node,
-      technologies.figma,
-      technologies.git,
-      technologies.tailwind,
     ],
   },
   /* {
@@ -75,7 +76,7 @@ export const projects = [
     ],
   }, */
  
-  {
+ /*  {
     projectName: "chat",
     isUnderDevelopment: false,
     title: "TatooineTweets",
@@ -92,7 +93,7 @@ export const projects = [
       technologies.react,
       technologies.socket,
     ],
-  },
+  }, */
   /* {
     projectName: "karako",
     title: "Karakószörcsök",
