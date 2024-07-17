@@ -8,7 +8,7 @@ export const projects = [
     isUnderDevelopment: true,
     title: "Exprilliant",
     github: "https://github.com/Homvi/regexp-live",
-    live: "https://exprilliant.netlify.app/",
+    live: "https://exprilliant-7mis8.ondigitalocean.app/",
     speed:
       "https://pagespeed.web.dev/analysis/https-exprilliant-netlify-app/1db1k1vjpi?form_factor=desktop",
     technologies: [
